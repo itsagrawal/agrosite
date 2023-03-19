@@ -12,9 +12,9 @@ export class Equipment {
     owner: User
 
     constructor({ name, price, owner }: Partial<Equipment>) {
-        this.name = name
-        this.price = price
-        this.owner = owner
+        this.name = name!
+        this.price = price!
+        this.owner = owner!
     }
 
     addDescription({ description }: { description: Equipment['description'] }) {

@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Equipment Rental Platform</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="icon" href="https://i.ibb.co/zGHc1Wq/agro-site.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('https://i.ibb.co/swh8Ccf/Untitled-design-1.png');
+    background-color: #cdec9b;
+    min-width: 750px;
+  }
+
+  a {
+    color: #333;
+    text-decoration: none;
+  }
+
+  header {
+    background-color: rgba(4, 155, 122, 0.774);
+    color: rgb(253, 243, 208);
+    padding: 20px;
+    padding-top: 0px;
+    box-shadow: 0 20px 25px rgba(2, 100, 7, 0.342);
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .add_item_symbol {
+    display: none;
+    font-size: 40px;
+    text-align: center;
+    line-height: 1px;
+  }
+
+  .add_item {
+    border: 2px solid rgb(0, 255, 0);
+    color: rgb(68, 67, 67);
+    background-color: greenyellow;
+    padding: 3px;
+    height: 35px;
+    margin: auto;
+    margin-right: 0px;
+    margin-left: 0px;
+    -webkit-box-shadow: 0px 0px 41px -5px rgba(0, 46, 2, 0.65);
+    -moz-box-shadow: 0px 0px 41px -5px rgba(0, 46, 2, 0.65);
+    box-shadow: 0px 0px 41px -5px rgba(0, 46, 2, 0.65);
+    transition: all 0.3s ease-in-out;
+
+  }
+
+  .add_item:hover {
+    cursor: pointer;
+    color: rgb(0, 255, 0);
+    border: 2px solid rgb(206, 252, 139);
+    background-color: rgb(0, 46, 0);
+  }
+
+  main {
+    margin: 20px;
+  }
+
+  h2 {
+    color: #333;
+    font-size: 36px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .equipment {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .item {
+    flex-basis: calc(33.33% - 20px);
+    margin: 10px;
+    /*background-color: rgb(255, 255, 255,0.4);
+    backdrop-filter: blur(1px);*/
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(250, 253, 57);
+    border-radius: 3px;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .item:hover {
+    transform: translateY(-10px);
+    background-color: rgb(255, 255, 255, 0.4);
+    backdrop-filter: blur(1px);
+    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.185);
+    border: 2px solid rgb(153, 255, 0);
+    -webkit-box-shadow: inset 0px 0px 46px -17px rgba(0, 191, 6, 1);
+    -moz-box-shadow: inset 0px 0px 46px -17px rgba(0, 191, 6, 1);
+    box-shadow: inset 0px 0px 46px -17px rgba(0, 191, 6, 1);
+  }
+
+  .item img {
+    width: auto;
+    height: 200px;
+    margin-bottom: 10px;
+  }
+
+  h3 {
+    color: #333;
+    font-size: 24px;
+  }
+
+  .img-icon {
+    max-width: 120px;
+    float: left;
+    cursor: pointer;
+    border-radius: 90px;
+  }
+
+  p {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  h4 {
+    margin-bottom: 10px;
+    color: darkgreen;
+  }
+
+  h4::before {
+    content: "[\20B9";
+  }
+
+  .equipment button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .equipment button:hover {
+    background-color: rgba(215, 252, 128, 0.61);
+    color: #333;
+    border: 1px solid #333;
+  }
+
+  .popup-container {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  .popup-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+    border-radius:20px;
+    background-color: rgb(255, 255, 255,0.4);
+    backdrop-filter: blur(5px);
+    -webkit-box-shadow: 0px 2px 300px 6px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 2px 300px 6px rgba(0,0,0,0.75);
+box-shadow: 0px 2px 300px 6px rgba(0,0,0,0.75);
+  }
+  .close_button{
+    display: inline-block;
+    position: relative;
+    left: 500px;
+    top:-70px;
+    border: 2px solid rgba(219, 25, 25, 0.753);
+    border-radius: 50%;
+    text-align: right;
+    transition: all 0.1s ease-in-out;
+  }
+  .close-button {
+    color: black;
+    background-color: transparent;
+    border: none;
+    font-size: 28px;
+    padding: 0px 7px;
+    font-weight: bold;
+    transition: all 0.1s ease-in-out;
+  }
+
+  /* Close button hover styles */
+  .close-button:hover,
+  .close-button:focus {
+    color: white;
+    cursor: pointer;
+  }
+  .close_button:hover {
+    border-color: rgb(255, 0, 0);
+    background-color: red;
+    cursor: pointer;
+  }
+  /* Registration form styles */
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  label {
+    margin-bottom: 10px;
+  }
+
+  input[type="text"],
+  input[type="url"],
+  input[type="number"] {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    opacity: 0.9;
+    border-bottom: 1px solid gray;
+    outline: none;
+
+  }
+  input[type="text"]:focus,
+  input[type="url"]:focus,
+  input[type="number"]:focus{
+    opacity: 1;
+    border-bottom: 1px solid black;
+    
+  }
+
+  input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+
+  footer {
+    background-color: rgb(10, 20, 9);
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    bottom: 0;
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  footer ul {
+    list-style-type: none;
+    display: flex;
+    overflow: hidden;
+  }
+
+  footer ul li img {
+    width: 30px;
+    margin-left: 20px;
+    cursor: pointer;
+  }
+
+  footer ul li img:hover {
+    background-color: white;
+    border-radius: 80px;
+  }
+
+  @media screen and (max-width:790px) {
+    .add_item_symbol {
+      display: inline-block;
+    }
+
+    .add_item_text {
+      display: none;
+    }
+
+    .equipment {
+      display: block;
+    }
+  }
+
+  /*@media screen and (min-width:843px) {
+    h1 {
+      font-size: 40px;
+    }
+
+    .img-icon {
+      width: 90px;
+    }
+  }*/
+</style>
+
+<body>
+  <header>
+    <nav>
+      <img src="https://i.ibb.co/zGHc1Wq/agro-site.png" alt="logo" class="img-icon">
+      <h1 style="margin: auto;font-size: 35px;">Equipment Rental Platform</h1>
+      <button class="add_item add_item_symbol" id="append-list" onclick="showPopup()">+</button>
+      <button class="add_item add_item_text" id="append-list" onclick="showPopup()">ADD ITEM TO RENT</button>
+    </nav>
+  </header>
+  <main>
+    <h2>Available Equipment for Rent</h2>
+    <div class="equipment">
+      <div class="item">
+        <img src="https://kartartractors.com/assets/img/hero-slider/kartar-tractors5936.jpg" alt="tractor">
+        <h3>Tractor</h3>
+        <h4>4199 per day]</h4>
+        <p>Description of the tractor goes here.</p>
+        <button>Rent Now</button>
+      </div>
+      <div class="item">
+        <img src="https://thumbs.dreamstime.com/b/old-single-blade-farm-plow-isolated-25783345.jpg" alt="plow">
+        <h3>Plow</h3>
+        <h4>2285 per day]</h4>
+        <p>Description of the plow goes here.</p>
+        <button>Rent Now</button>
+      </div>
+      <div class="item">
+        <img src="https://ksagrotech.org/wp-content/uploads/2021/09/ks8500.jpg" alt="harvester">
+        <h3>Harvester</h3>
+        <h4>6889 per day]</h4>
+        <p>Description of the harvester goes here.</p>
+        <button>Rent Now</button>
+      </div>
+      <div class="item">
+        <img src="https://www.tractorjunction.com/assets/images/images/implementTractor/super-seeder-117-1673520503.jpg"
+          alt="Seeder">
+        <h3>Seeder</h3>
+        <h4>3290 per day]</h4>
+        <p>Description of the tractor goes here.</p>
+        <button>Rent Now</button>
+      </div>
+    </div>
+    <div id="popup-container" class="popup-container">
+      <div class="popup-content">
+        <h2>Enter Details</h2>
+        <div class="close_button"><button class="close-button" onclick="hidePopup()">&times;</button>
+        </div>
+          <form onsubmit="submitForm(event)">
+          <label for="name">Product Name</label>
+          <input type="text" id="name" name="name" required>
+          <label for="price">Amount</label>
+          <input type="number" id="price" name="price" required>
+          <label for="url">Url of the image of product</label>
+          <input type="url" id="url" name="password" required>
+          <label for="description">Description of product</label>
+          <input type="text" id="description" name="description" required>
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p>2023 Farming Equipment Rental Platform</p>
+    <ul>
+      <li>
+        <p style="margin: 0px;">Contact Us: </p>
+      </li>
+      <li><img
+          src="https://www.freepnglogos.com/uploads/logo-ig-png/logo-ig-png-instagram-logo-camel-productions-website-25.png">
+      </li>
+      <li><img
+          src="https://www.freepnglogos.com/uploads/facebook-logo-icon/facebook-logo-icon-facebook-icon-png-images-icons-and-png-backgrounds-1.png">
+      </li>
+      <li><img src="https://www.freepnglogos.com/uploads/whatsapp-logo-app-png-4.png"></li>
+    </ul>
+  </footer>
+  <script>
+    var popupContainer = document.getElementById("popup-container");
+    var nameInput = document.getElementById("name");
+    var priceInput = document.getElementById("price");
+    var urlInput = document.getElementById("url");
+    var descriptionInput = document.getElementById("description");
+    function showPopup() {
+      popupContainer.style.display = "block";
+      document.body.style.overflow = "hidden";
+    }
+    // Hide the popup
+    function hidePopup() {
+      popupContainer.style.display = "none";
+      document.body.style.overflow = "auto";
+    }
+    function submitForm(event) {
+      event.preventDefault();
+      nameInput.value = "";
+      priceInput.value = "";
+      urlInput.value = "";
+      descriptionInput.value = "";
+      hidePopup();
+    }
+  </script>
+</body>
+</html>

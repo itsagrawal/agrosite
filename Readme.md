@@ -4,9 +4,9 @@ Equipment
 Properties:
 
 Functions of marketplace:
-    buy
-    sell
-    rent
+    Buy
+    Sell
+    Rent
     
 How to add your work in this repo
 

@@ -1,6 +1,6 @@
 # Tech Pioneers
 # Solving for India Hackathon 
-![Solving for India Hackathon](https://user-images.githubusercontent.com/55245862/156772177-691163b0-a0b0-4102-a945-37b4f281e4c4.jpeg)
+![Solving for India Hackathon](https://user-images.githubusercontent.com/)
 ## Theme: 
 > #### (AgroTech)
 > At a given time some farmer's equipment are idle while some farmer need one. A platform that allows farmers to rent and buy farming equipment. A simple platform with variours features and support can provide function of booking and renting equipment will help needy farmers.
@@ -77,7 +77,7 @@ $ npm start
 | 1. | Himanshu jha (Team Leader) | Github management | [@Himanshujha2106](https://github.com/Himanshujha2106)  |
 | 2. | Prabhat chaubey | Frontend Development | [@prabhatOn](https://github.com/prabhatOn) |
 | 3. | Kunal agrawal | Backend Development | [@its-kunal-ssi](https://github.com/its-kunal-ssi) |
-| 4. | Vaibhav ghanekar | Frontend Development| [@Vvaibhav-ghanekar](https://github.com/Vvaibhav-ghanekar)  |
+| 4. | Vaibhav ghanekar | Frontend Development| [@Vvaibhav-ghanekar](https://github.com/Vaibhav-ghanekar)  |
 
 ## Maintainers✨
 

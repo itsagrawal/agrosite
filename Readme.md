@@ -1,6 +1,6 @@
 # Tech Pioneers
 # Solving for India Hackathon 
-![Solving for India Hackathon](https://user-images.githubusercontent.com/)
+![Solving for India Hackathon](https://github.com/its-kunal-ssi/FarmLink/blob/main/Farming%20website/IMG_20230415_221225.jpg)
 ## Theme: 
 > #### (AgroTech)
 > At a given time some farmer's equipment are idle while some farmer need one. A platform that allows farmers to rent and buy farming equipment. A simple platform with variours features and support can provide function of booking and renting equipment will help needy farmers.

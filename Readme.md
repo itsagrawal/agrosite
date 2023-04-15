@@ -20,7 +20,7 @@
 
 # Demo Video
 
-<a href="https://youtu.be/0KC02leCvRo"> <img src="https://github.com/its-kunal-ssi/FarmLink/blob/main/Farming%20website/IMG_20230415_215314.jpg" alt="Demo Video" height='250' width='400'/> </a>
+<a href="https://youtu.be/0KC02leCvRo"> <img src="https://github.com/its-kunal-ssi/FarmLink/blob/main/Farming%20website/IMG_20230415_215314.jpg" alt="Demo Video" height='250' width='600'/> </a>
 
 
 ## Technology Stack in use:
@@ -76,7 +76,7 @@ $ npm start
 | 1. | Himanshu jha (Team Leader) | Github management | [@Himanshujha2106](https://github.com/Himanshujha2106)  |
 | 2. | Prabhat chaubey | Frontend Development | [@prabhatOn](https://github.com/prabhatOn) |
 | 3. | Kunal agrawal | Backend Development | [@its-kunal-ssi](https://github.com/its-kunal-ssi) |
-| 4. | Vaibhav ghanekar | Frontend Development| [@Vvaibhav-ghanekar](https://github.com/Vaibhav-ghanekar)  |
+| 4. | Vaibhav ghanekar | Frontend Development| [@Vaibhav-ghanekar](https://github.com/Vaibhav-ghanekar)  |
 
 ## Maintainers✨
 

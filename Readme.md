@@ -5,6 +5,9 @@
 > #### (AgroTech)
 > At a given time some farmer's equipment are idle while some farmer need one. A platform that allows farmers to rent and buy farming equipment. A simple platform with variours features and support can provide function of booking and renting equipment will help needy farmers.
 
+#### Website Live on
+[Link](https://agrosite.web.app/)
+
 ## Features
 
 1. Login/Sign Up.

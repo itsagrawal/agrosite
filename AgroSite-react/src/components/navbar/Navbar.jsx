@@ -10,21 +10,21 @@ export default function Navbar() {
           <div>
             <ul>
               <li>
-                  <NavLink to="/categories">categories</NavLink>
+                <NavLink to="/categories">categories</NavLink>
               </li>
             </ul>
             <ul>
               <li>
-                  <NavLink to={"/store"}>Store</NavLink>
+                <NavLink to={"/store"}>Store</NavLink>
               </li>
               <li>
-                  <NavLink to={"/about"}>About</NavLink>
+                <NavLink to={"/about"}>About</NavLink>
               </li>
               <li>
-                  <NavLink to={"/contact"}>Contact</NavLink>
+                <NavLink to={"/contact"}>Contact</NavLink>
               </li>
               <li>
-                  <NavLink to={"/login"}>Log In</NavLink>
+                <NavLink to={"/login"}>Log In</NavLink>
               </li>
             </ul>
             <ul className="social-media">
@@ -64,16 +64,16 @@ export default function Navbar() {
                 <NavLink to={"/"}>Home</NavLink>
               </li>
               <li>
-                  <NavLink to={"/store"}>Store</NavLink>
+                <NavLink to={"/store"}>Store</NavLink>
               </li>
               <li>
-                  <NavLink to={"/about"}>About</NavLink>
+                <NavLink to={"/about"}>About</NavLink>
               </li>
               <li>
-                  <NavLink to={"/contact"}>Contact</NavLink>
+                <NavLink to={"/contact"}>Contact</NavLink>
               </li>
               <li>
-                  <NavLink to={"/login"}>Log In</NavLink>
+                <NavLink to={"/login"}>Log In</NavLink>
               </li>
             </ul>
             <form>

@@ -1,15 +1,13 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://pro.fontawesome.com/releases/v5.10.0/css/all.css");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css");
 @import url("https://pro.fontawesome.com/releases/v5.10.0/css/all.css");
 @import url("https://fonts.googleapis.com/css?family=Spartan");
 
-
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
-
 
 * {
   margin: 0;
@@ -65,7 +63,7 @@ p {
   background: #171819;
   width: 100%;
   height: 100%;
-  opacity: 0.90;
+  opacity: 0.9;
 }
 
 button.normal {
@@ -81,7 +79,6 @@ button.normal {
   transition: 0.2s;
 }
 
-
 /*navbar*********************************************************************************************************************/
 
 ul {
@@ -90,9 +87,10 @@ ul {
 }
 
 .header1 {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   min-height: 100vh;
-  background-image: url("assets/pexels-lucian-petrean-4557529.jpg") no-repeat center;
+  background-image: url("assets/pexels-lucian-petrean-4557529.jpg") no-repeat
+    center;
   /* background: url("../assets/pexels-lucian-petrean-4557529.jpg") no-repeat center; */
   background-size: cover;
   z-index: -1;
@@ -124,7 +122,7 @@ main {
 }
 
 nav {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   position: fixed;
   top: 0;
   left: 0;
@@ -237,7 +235,7 @@ nav .fa-bars:hover {
 }
 
 .menu {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   background: rgba(245, 244, 244, 0.8);
   position: fixed;
   top: 0;
@@ -247,7 +245,7 @@ nav .fa-bars:hover {
   font-size: 1.3em;
   height: 0;
   opacity: 0;
-  transition: 0.5s cubic-bezier(.74, -0.03, .83, .67);
+  transition: 0.5s cubic-bezier(0.74, -0.03, 0.83, 0.67);
   overflow-y: hidden;
 }
 
@@ -264,7 +262,7 @@ nav .fa-bars:hover {
   margin: 1em 0;
 }
 
-.menu>div {
+.menu > div {
   display: felx;
   justify-content: start;
   align-items: center;
@@ -274,7 +272,7 @@ nav .fa-bars:hover {
   overflow-y: scroll;
 }
 
-.menu>div::-webkit-scrollbar {
+.menu > div::-webkit-scrollbar {
   display: none;
 }
 
@@ -291,7 +289,6 @@ nav .fa-bars:hover {
 #navbar li a.active {
   color: #d36938;
 }
-
 
 /*classes fr js*/
 
@@ -327,10 +324,9 @@ nav .fa-bars:hover {
   color: #d36938;
 }
 
-
 /*resposive*/
 
-@media screen and (max-width:800px) {
+@media screen and (max-width: 800px) {
   nav .container-inner {
     display: none;
   }
@@ -340,26 +336,24 @@ nav .fa-bars:hover {
   }
 }
 
-@media screen and (min-width:800px) {
+@media screen and (min-width: 800px) {
   .menu form {
     display: none;
   }
 }
 
-@media screen and (max-width:400px) {
+@media screen and (max-width: 400px) {
   html {
     font-size: 13px;
   }
 }
 
-
 /*nav close*/
-
 
 /*header*/
 
 .header {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   position: relative;
   width: 100%;
   height: 100vh;
@@ -387,11 +381,10 @@ section p {
   font-size: 1.2em;
 }
 
-
 /** header item*/
 
 .coll {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   width: 100%;
   position: absolute;
   top: 45%;
@@ -401,7 +394,7 @@ section p {
 }
 
 .title {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   text-transform: uppercase;
   font-size: 170px;
   letter-spacing: 20px;
@@ -410,7 +403,7 @@ section p {
 }
 
 .subtitle {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   text-transform: uppercase;
   font-size: 25px;
   letter-spacing: 15px;
@@ -419,7 +412,7 @@ section p {
 }
 
 #feature {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   background-image: url("assets/home-zig-zag-bg.png");
   background-position: center center;
   background-repeat: no-repeat;
@@ -439,7 +432,7 @@ section p {
   position: relative;
   font-size: 42px;
   font-weight: 400;
-  font-family: 'Spartan', sans-serif;
+  font-family: "Spartan", sans-serif;
   color: #363636;
   line-height: normal;
   letter-spacing: -0.05em;
@@ -449,11 +442,10 @@ section p {
   margin-inline-end: 0px;
 }
 
-
 /* cards ************************************************************************************************************************ */
 
 .c-con {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   position: relative;
   top: 50px;
   display: flex;
@@ -462,7 +454,8 @@ section p {
 }
 
 .wallet {
-  --bg-color: #ceb2fc\; --bg-color-light: #f0e7ff;
+  --bg-color: #ceb2fc;
+  --bg-color-light: #f0e7ff;
   --text-color-hover: #fff;
   --box-shadow-color: rgba(252, 215, 178, 0.48);
 }
@@ -485,7 +478,8 @@ section p {
 
 .card:hover {
   transform: translateY(-5px) scale(1.005) translateZ(0);
-  box-shadow: 0 24px 36px rgba(0, 0, 0, 0.11), 0 24px 46px rgba(252, 206, 178, 0.48);
+  box-shadow: 0 24px 36px rgba(0, 0, 0, 0.11),
+    0 24px 46px rgba(252, 206, 178, 0.48);
 }
 
 .card:hover .over {
@@ -510,7 +504,7 @@ section p {
 }
 
 .card p {
-  font-family: 'Spartan', sans-serif;
+  font-family: "Spartan", sans-serif;
   margin-top: 18px;
   font-size: 18px;
   line-height: 24px;
@@ -575,12 +569,11 @@ section p {
   -o-transition: transform 0.4s ease-out;
 }
 
-
 /* featured products************************************************************************************************************* */
 
 #product1 {
   padding: 108px 80px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   text-align: center;
   /* background-image: url(pexels-joão-jesus-925743.jpg); */
   background-position: center center;
@@ -665,7 +658,6 @@ section p {
   right: 10px;
 }
 
-
 /* footeer*************************************************************************************************************************** */
 
 #newsletter {
@@ -738,7 +730,7 @@ button.normal {
 footer {
   padding: 80px 30px;
   margin: 20px 50px;
-  font-family: 'Spartan', sans-serif;
+  font-family: "Spartan", sans-serif;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -806,7 +798,6 @@ footer .copyright {
   text-align: center;
 }
 
-
 /* shop-page************************************************************************************ */
 
 #shop-nav {
@@ -839,7 +830,6 @@ footer .copyright {
   font-size: 16px;
   font-weight: 600;
 }
-
 
 /* product page**************************************************************************************************************** */
 
@@ -888,11 +878,10 @@ footer .copyright {
   line-height: 25px;
 }
 
-
 /* about page***************************************************************************************************************** */
 
 #about-nav {
-  background-image: url('assets/polotno\ \(2\).png');
+  background-image: url("assets/polotno\ \(2\).png");
   width: 100%;
   height: 50vh;
   background-size: cover;
@@ -923,7 +912,6 @@ footer .copyright {
 .head-t {
   display: none;
 }
-
 
 /* contact-page***************************************************************************************************** */
 
@@ -1009,7 +997,6 @@ footer .copyright {
   color: #fff;
 }
 
-
 /* .people img {
     width: 5%;
     height: 5%;
@@ -1043,7 +1030,7 @@ footer .copyright {
   color: #000;
 }
 
-@media (max-width:477px) {
+@media (max-width: 477px) {
   #contact-details {
     flex-direction: column;
   }
@@ -1069,7 +1056,6 @@ footer .copyright {
   }
 }
 
-
 /* cart page ********************************************************************************************************/
 
 #cart {
@@ -1078,7 +1064,7 @@ footer .copyright {
 
 #cart-nav {
   /* background-color: #c3c0c0; */
-  background-image: url('assets/polotno\ \(2\).png');
+  background-image: url("assets/polotno\ \(2\).png");
   width: 100%;
   height: 50vh;
   background-size: cover;
@@ -1202,10 +1188,9 @@ footer .copyright {
   font-size: 13px;
 }
 
-
 /* responsive design*****************************************************************************************************************/
 
-@media(max-width:477px) {
+@media (max-width: 477px) {
   #menu-btn {
     display: block;
   }
@@ -1371,7 +1356,7 @@ footer .copyright {
   }
 
   section p {
-    font-size: 1.em;
+    font-size: 1em;
   }
 
   #cart-nav {

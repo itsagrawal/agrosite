@@ -37,12 +37,12 @@
     src="https://img.shields.io/badge/github%20-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white" /> 
 
 ## Technology Stack:
-- **Frontend**: React, Redux
-- **Backend**: Django Rest Framework
+- **Frontend**: React
+- **Backend**:  Rest Framework
 - **IDE**: VS Code
 - **Design**: Figma, Canva
 - **Version Control**: Git and GitHub
-- **Database**: SQL
+- **Database**: Firestore
 
 
 ### How to Get Started?

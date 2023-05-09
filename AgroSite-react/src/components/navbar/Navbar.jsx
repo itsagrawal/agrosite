@@ -1,16 +1,19 @@
+import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 export default function Navbar() {
+  const [menState, setState] = useState(false);
+
   return (
     <section>
       <div className="back">
         <div className="overlay"></div>
       </div>
       <nav id="navbar">
-        <div className="menu">
+        <div className={`menu ${menState ? "menu-open" : ""}`}>
           <div>
             <ul>
               <li>
-                <NavLink to="/categories">categories</NavLink>
+                <NavLink to="/#product1">Categories</NavLink>
               </li>
             </ul>
             <ul>
@@ -45,8 +48,12 @@ export default function Navbar() {
               </li>
             </ul>
             <form>
-              <div className="input-wrap">
-                <input type="search" placeholder="Search..." />
+              <div className="input-wrap flex gap-x-3">
+                <input
+                  type="search"
+                  placeholder="Search..."
+                  className="px-2 rounded"
+                />
                 <button type="submit">
                   <i className="fas fa-search"></i>
                 </button>
@@ -78,14 +85,25 @@ export default function Navbar() {
             </ul>
             <form>
               <div className="input-wrap">
-                <input id="n-input" type="search" placeholder="Search.." />
+                <input
+                  id="n-input"
+                  type="search"
+                  placeholder="Search.."
+                  className="px-2 rounded"
+                />
                 <button type="submit">
                   <i className="fas fa-search"></i>
                 </button>
               </div>
             </form>
           </div>
-          <i className="fas fa-bars" id="menu-btn"></i>
+          <i
+            className="fas fa-bars"
+            id="menu-btn"
+            onClick={() => {
+              setState((prevState) => !prevState);
+            }}
+          ></i>
         </div>
       </nav>
     </section>

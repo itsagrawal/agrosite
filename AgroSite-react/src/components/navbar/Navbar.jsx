@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { useAppContext } from "../../firebase/ApplicationContext";
 export default function Navbar() {
   const [menState, setState] = useState(false);
-
   return (
     <section>
       <div className="back">
@@ -26,9 +26,7 @@ export default function Navbar() {
               <li>
                 <NavLink to={"/contact"}>Contact</NavLink>
               </li>
-              <li>
-                <NavLink to={"/login"}>Log In</NavLink>
-              </li>
+              <LogInBtn />
             </ul>
             <ul className="social-media">
               <li>
@@ -79,9 +77,7 @@ export default function Navbar() {
               <li>
                 <NavLink to={"/contact"}>Contact</NavLink>
               </li>
-              <li>
-                <NavLink to={"/login"}>Log In</NavLink>
-              </li>
+              <LogInBtn />
             </ul>
             <form>
               <div className="input-wrap">
@@ -109,3 +105,28 @@ export default function Navbar() {
     </section>
   );
 }
+
+const LogInBtn = () => {
+  const { signIn, user, signOutApp } = useAppContext();
+  return (
+    <li>
+      {user ? (
+        <a
+          onClick={() => {
+            signOutApp();
+          }}
+        >
+          Sign Out
+        </a>
+      ) : (
+        <a
+          onClick={() => {
+            signIn();
+          }}
+        >
+          Log In
+        </a>
+      )}
+    </li>
+  );
+};

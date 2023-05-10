@@ -1,0 +1,291 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+header{
+    padding:22px;
+    background-color: rgba(228, 228, 228, 0.322);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.123);
+    display: flex;
+    align-items: center;
+}
+header h3{
+    font-weight: 200;
+    text-align: center;
+    margin-left: 30px;
+    font-size: 20px;
+    display: none;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+.container h1{
+    text-transform: uppercase;
+    font-size: 24px;
+    padding-bottom: 15px;
+}
+.container .form-container{
+    border: 1px solid rgb(172, 171, 171);
+    width: 850px;
+    padding: 15px;
+    border-radius: 5px;
+    position:relative;
+    margin-bottom: 20px;
+}
+.container .form-container h2{
+    text-transform: uppercase;
+    font-size: 19px;
+    margin-bottom:30px;
+}
+.container .form-container .lists .links ul{
+    display: flex;
+    list-style-type: none;
+}
+
+.container .form-container .lists .links ul li{
+    margin-left: 0px;
+    font-size: 12px;
+    color: rgb(143, 143, 143);
+    margin-right: 5px;
+}
+.container .form-container .lists{
+    display: flex;
+}
+.container .form-container .lists .change p{
+    font-size: 13px;
+    text-underline-offset: 3px;
+    text-align: center;
+}
+.container .form-container .lists .change{
+    margin-left: 10px;
+}
+.container .form-container .lists .change p a:hover{
+    text-decoration: none;
+}
+.container .form-container .lists{
+    margin-bottom: 30px;
+}
+.container .form-container .partition{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: rgb(172, 170, 170);
+    left: 0px;
+}
+
+.container .form-container .details{
+    padding:10px;
+}
+.container .form-container .details h2{
+    margin: 0px;
+    margin-top: 15px;
+}
+.container .form-container .details form{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    flex-wrap: wrap;
+}
+.container .form-container .details form label{
+    margin-bottom:2px;
+    font-size: 16px;
+    margin-top: 30px;
+}
+.container .form-container .details form select,
+.container .form-container .details form input[type=number],
+.ad_title textarea,
+.description textarea
+{
+    padding: 12px 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    outline: none;
+}
+.container .form-container .details form select:focus,
+.container .form-container .details form input[type=number]:focus,
+.ad_title textarea:focus,
+.description textarea:focus
+{
+    border: 4px solid rgb(2, 168, 168);
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+
+button{
+    padding: 8px 16px;
+    background-color: transparent;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    margin: 5px;
+}
+button:hover{
+    background-color: rgba(135, 206, 250, 0.575);
+}
+.ad_title{
+    display: flex;
+    flex-direction: column;
+}
+.ad_title textarea, .description textarea{
+    width: 100%;
+}
+
+.price h2{
+    margin-bottom: 20px !important;
+}
+.price label{
+    margin-top:30px !important;
+}
+
+.photos{
+    display: flex;
+    flex-wrap: wrap;
+}
+.card{
+    width:100px;
+    height: 100px;
+    border:2px solid rgba(102, 102, 102, 0.651);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: grey;
+    margin: 5px;
+    cursor: pointer;
+}
+.card i{
+    margin-bottom: 5px;
+}
+.active{
+    border-color: rgb(17, 1, 37);
+    color: black;
+}
+.selector{
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: 1px solid gray;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+.selector div{
+    width: 100%;
+    padding: 0px 20px 10px 20px;
+}
+.selector .active{
+    font-weight: 600;
+    border-bottom: 4px solid black;
+    text-align: center;
+}
+
+.container-1{
+    display: flex;
+    align-items:start;
+}
+.container-1 .image{
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 40px;
+    cursor: pointer;
+}
+.container-1 .image img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.container-1 .image  .overlay{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(1, 71, 36, 0.781);
+    color: #fff;
+    padding: 3px;
+    text-align: center;
+}
+.container-1 .name-label{
+    width: 70%;
+}
+
+.container-1 .name-label input[type=text]{
+    padding: 10px 15px ;
+    width: 100%;
+    border-radius: 5px;
+}
+.submit-btn{
+    width:100px;
+    padding: 15px;
+    margin-top:20px;
+    font-weight: 600;
+    color: rgb(95, 95, 95);
+    background-color: lightgray;
+    pointer-events: none;
+}
+footer{
+    background-color: #002f34;
+    padding: 10px 20px; 
+    display: flex;
+}
+footer .footer-container{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    width: 100%;
+}
+footer .footer-container .country .country-links ul,
+footer .footer-container .right ul{
+    text-decoration: none;
+    list-style-type: none;
+    display: flex;
+    font-size: 12px;
+}
+
+footer .footer-container .country .country-links ul li,
+footer .footer-container .right ul li{
+    margin-right: 8px;
+    color: white;
+}
+footer .footer-container .country .country-links ul li a{
+    color: white;
+    text-decoration: none;
+    
+}
+footer .footer-container .right h4{
+    font-size: 15px;
+}
+@media screen and (max-width: 1023px){
+    header h3{
+        display: block;
+    }
+    main .container .pya{
+        display: none;
+    }
+    .container .form-container .lists{
+        justify-content: space-between;
+    }
+}
+@media screen and (max-width: 540px){
+    .container .form-container{
+        width: 100%;
+    }
+    .container .form-container .details form{
+        width: 100%;
+    }
+}

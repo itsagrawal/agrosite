@@ -1,0 +1,119 @@
+*{
+    margin: 0px;
+    padding:0px;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main{
+    background-color: rgba(231, 231, 231, 0.479);
+    display: flex;
+    padding: 50px 40px;
+}
+.section-left{
+    width: 30%;
+    background-color: white;
+    margin:10px;
+    border-radius: 5px;
+    position:fixed;
+    top:73px;
+    border: 1px solid rgba(211, 211, 211, 0.473);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.055);
+}
+.section-left .profile .image img{
+    border-radius: 50%;
+    width: 100px;
+    outline:1px solid rgb(182, 181, 181);
+    outline-offset: 3px;
+}
+.section-left .profile .image{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    position: relative;
+}
+.section-left .profile .image .overlay{
+    position: absolute;
+    content: "";
+    width:100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color:rgba(90, 89, 89, 0.63) ;
+    font-size: 18px;
+    display: flex;
+    color: rgb(58, 57, 57);
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.1s ease-in;
+}
+.section-left .profile .image:hover .overlay{
+    opacity: 1;
+    cursor: pointer;
+}
+.section-left .profile{
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+}
+.section-left h1{
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 14px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    font-size: 25px;
+}
+.section-left h2{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 14px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    font-size: 20px;
+    color: black;
+}
+.section-left .options a{
+    text-decoration: none;
+}
+.section-left .options{
+    border-bottom: 1px solid lightgray;
+}
+.section-left .options :hover{
+    color: blueviolet;
+}
+.section-right{
+    width: 70%;
+    margin-left: 450px;
+}
+
+.section-right .content{
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid rgba(211, 211, 211, 0.473);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.055);
+}
+.section-right h2{
+    text-transform: uppercase;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+@media screen and (max-width: 1024px){
+    main{
+        display: block;
+        padding: 30px 20px;
+    }
+    .section-left{
+        width: 100%;
+        position:static;
+    }
+    .section-right{
+        width: 100%;
+        margin-left: 10px;
+    }
+}

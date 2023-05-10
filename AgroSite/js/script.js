@@ -1,4 +1,4 @@
-import { axios } from "axios";
+// import { axios } from "axios";
 const menBtn = document.getElementById("menu-btn");
 const navbar = document.getElementById("navbar");
 const menu = document.querySelector(".menu");

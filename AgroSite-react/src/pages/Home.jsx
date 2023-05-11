@@ -1,10 +1,20 @@
+import { useState, useEffect } from "react";
+import { useAppContext } from "../firebase/ApplicationContext";
 import Navbar from "../components/navbar/Navbar";
 import Helmet from "react-helmet";
 import NewsLetter from "../components/newsletter/NewsLetter";
 import Footer from "../components/footer/Footer";
 import Feature from "../components/feature/Feature";
+import SellerOrBuyerModal from "../components/modals/SellerOrBuyerModal";
 
 export default function Home() {
+  const [isOpenModal, setModal] = useState(false);
+  const { user } = useAppContext();
+  useEffect(() => {
+    setTimeout(() => {
+      if (user) setModal(true);
+    }, 3000);
+  }, [user]);
   return (
     <>
       <Helmet>
@@ -15,6 +25,7 @@ export default function Home() {
       <ProductList />
       <NewsLetter />
       <Footer />
+      <SellerOrBuyerModal isOpen={isOpenModal} setIsOpen={setModal} />
     </>
   );
 }

@@ -2,8 +2,18 @@ import { Route, Routes } from "react-router-dom";
 import Footer from "../components/footer/Footer";
 import SellerNavbar from "../components/navbar/SellerNavbar";
 import FeatureSeller from "../components/feature/FeatureSeller";
+import SellerRegisterPage from "./SellerRegisterPage";
 
 export default function Seller() {
+  return (
+    <Routes>
+      <Route path="" element={<SellerHomePage />}></Route>
+      <Route path="register" element={<SellerRegisterPage />}></Route>
+    </Routes>
+  );
+}
+
+function SellerHomePage() {
   return (
     <>
       {/* Navbar */}

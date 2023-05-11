@@ -8,7 +8,7 @@ export default function FeatureSeller() {
       <div className="flex flex-col mx-4 md:mx-0 text-center md:text-right md:text-6xl text-4xl font-semibold ">
         Be the smart <span className="text-[#d36938]">Farmer,</span> Seller.
         <div className="flex-auto h-auto"></div>
-        <button className="text-base bg-[#d36938] px-2 rounded md:self-end mt-4 self-center">
+        <button className="text-base bg-[#d36938] px-2 py-1 rounded md:self-end mt-4 self-center outline-none">
           Register Now
         </button>
       </div>

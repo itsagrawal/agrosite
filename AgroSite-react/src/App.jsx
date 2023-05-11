@@ -4,6 +4,7 @@ import Store from "./pages/Store";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Seller from "./pages/Seller";
+import { useEffect, useState } from "react";
 import { useAppContext } from "./firebase/ApplicationContext";
 import FullPageLoader from "./components/Loader/FullPageLoader";
 import FoF from "./pages/404";
@@ -11,6 +12,18 @@ import SignInModal from "./components/modals/SignInModal";
 
 export default function App() {
   const { loading, user } = useAppContext();
+  // Sign In modal
+  const [showSignInModal, setSignModal] = useState(false);
+  useEffect(() => {
+    new Promise((res) => {
+      setTimeout(() => {
+        if (!user) setSignModal(true);
+        else setSignModal(false);
+        res();
+      }, 200);
+    });
+  }, [user]);
+
   return (
     <>
       {loading ? (
@@ -26,7 +39,7 @@ export default function App() {
             <Route path="seller/*" element={<Seller />}></Route>
             <Route path="/*" element={<FoF />} />
           </Routes>
-          {user && !loading ? <></> : <SignInModal />}
+          <SignInModal isOpen={showSignInModal} setIsOpen={setSignModal} />
         </div>
       )}
     </>

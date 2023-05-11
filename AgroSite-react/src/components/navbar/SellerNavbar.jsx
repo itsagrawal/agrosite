@@ -1,11 +1,18 @@
 import { useAppContext } from "../../firebase/ApplicationContext";
+import { useNavigate } from "react-router-dom";
 
 export default function SellerNavbar() {
   const { user, signIn, signOutApp } = useAppContext();
+  const navigate = useNavigate();
   return (
     <nav className="static bg-white py-2 text-black">
       <div className="max-w-4xl min-w-max mx-auto flex">
-        <div className="text-[#d36938] font-semibold text-xl">
+        <div
+          className="text-[#d36938] font-semibold text-xl"
+          onClick={() => {
+            navigate("/seller");
+          }}
+        >
           Agro<span className="text-black">Site</span>
         </div>
         <div className="flex-auto"></div>

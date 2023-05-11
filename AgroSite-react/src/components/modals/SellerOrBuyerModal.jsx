@@ -1,9 +1,11 @@
 import { Dialog, Transition } from "@headlessui/react";
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 import { useAppContext } from "../../firebase/ApplicationContext";
+import FeatureSeller from "../feature/FeatureSeller";
+import { useNavigate } from "react-router-dom";
 
-export default function SignInModal({ isOpen, setIsOpen }) {
-  const { signIn } = useAppContext();
+export default function SellerOrBuyerModal({ isOpen, setIsOpen }) {
+  const navigate = useNavigate();
   function closeModal() {
     setIsOpen(false);
   }
@@ -37,18 +39,15 @@ export default function SignInModal({ isOpen, setIsOpen }) {
               leaveFrom="opacity-100 scale-100"
               leaveTo="opacity-0 scale-95"
             >
-              <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+              <Dialog.Panel className="w-full md:max-w-4xl max-w-xl transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
                 <Dialog.Title
                   as="h3"
-                  className="text-lg font-medium leading-6 text-gray-900"
+                  className="text-xl font-semibold text-gray-900"
                 >
-                  Wait a minute
+                  Are you a seller.
                 </Dialog.Title>
                 <div className="mt-2">
-                  <p className="text-sm text-gray-500 ">
-                    Verifying your action can help prevent accidental sign outs
-                    and improve the security of your account.
-                  </p>
+                  <FeatureSeller />
                 </div>
 
                 <div className="mt-4">
@@ -56,10 +55,12 @@ export default function SignInModal({ isOpen, setIsOpen }) {
                     type="button"
                     className="inline-flex justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 items-center gap-x-2"
                     onClick={() => {
-                      signIn();
+                      navigate("/seller");
+                      setIsOpen(false);
                     }}
                   >
-                    Sign In Now <i className="fa-brands fa-google"></i>
+                    Seller Portal{" "}
+                    <i className="fa-solid fa-arrow-right-from-bracket"></i>
                   </button>
                 </div>
               </Dialog.Panel>

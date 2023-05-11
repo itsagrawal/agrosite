@@ -1,6 +1,9 @@
+import AppJPG from "../../assets/app.jpg";
+import PlayJGP from "../../assets/play.jpg";
+import PayPNG from "../../assets/pay.png";
 export default function Footer() {
   return (
-    <footer>
+    <footer className="static mt-4">
       <div className="col">
         <a href="#" className="brand">
           <span>Agro</span>Site
@@ -46,11 +49,11 @@ export default function Footer() {
         <h4>Install App</h4>
         <p>From App Store or Google Play</p>
         <div className="row">
-          <img src="./assets/app.jpg" alt="" />
-          <img src="./assets/play.jpg" alt="" />
+          <img src={AppJPG} alt="" />
+          <img src={PlayJGP} alt="" />
         </div>
         <p>Secured Payment Gateways</p>
-        <img src="./assets/pay.png " alt="" />
+        <img src={PayPNG} alt="" />
       </div>
       <div className="copyright">
         <p>2023, AgroSite</p>

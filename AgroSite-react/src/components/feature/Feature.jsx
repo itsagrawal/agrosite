@@ -1,4 +1,31 @@
-export default function Feature() {
+import TractorSVG from "../../assets/tractor.svg";
+import CombineSVG from "../../assets/combine.svg";
+import RotavatorSVG from "../../assets/rotavator.svg";
+import SeederSVG from "../../assets/seeder.svg";
+import SprayerSVG from "../../assets/sprayer.svg";
+export default function CategoryFeature() {
+  const Categories = [
+    {
+      name: "Modern Tractor",
+      image: TractorSVG,
+    },
+    {
+      name: "Modern Harvester",
+      image: CombineSVG,
+    },
+    {
+      name: "Rotavator",
+      image: RotavatorSVG,
+    },
+    {
+      name: "Modern Seeder",
+      image: SeederSVG,
+    },
+    {
+      name: "Self Sprayer",
+      image: SprayerSVG,
+    },
+  ];
   return (
     <section id="feature">
       <div className="f-text">
@@ -11,42 +38,17 @@ export default function Feature() {
         </h2>
       </div>
       <div className="c-con">
-        <div className="card wallet">
-          <div className="over"></div>
-          <div className="circle">
-            <img src="./assets/tractor.svg" />
-          </div>
-
-          <p>Modern Tractors</p>
-        </div>
-        <div className="card wallet">
-          <div className="over"></div>
-          <div className="circle">
-            <img src="./assets/combine.svg" />
-          </div>
-          <p>modern harvester</p>
-        </div>
-        <div className="card wallet">
-          <div className="over"></div>
-          <div className="circle">
-            <img className="z" src="./assets/rotavator.svg" />
-          </div>
-          <p>rotavator</p>
-        </div>
-        <div className="card wallet">
-          <div className="over"></div>
-          <div className="circle">
-            <img src="./assets/seeder.svg" />
-          </div>
-          <p>Modern Seeder</p>
-        </div>
-        <div className="card wallet">
-          <div className="over"></div>
-          <div className="circle">
-            <img src="./assets/sprayer.svg" />
-          </div>
-          <p>Self Sprayer</p>
-        </div>
+        {Categories.map((v, idx) => {
+          return (
+            <div className="card wallet" key={idx}>
+              <div className="over"></div>
+              <div className="circle">
+                <img src={v.image} />
+              </div>
+              <p>{v.name}</p>
+            </div>
+          );
+        })}
       </div>
     </section>
   );

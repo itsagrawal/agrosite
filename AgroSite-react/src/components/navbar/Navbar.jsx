@@ -8,7 +8,7 @@ export default function Navbar() {
       <div className="back">
         <div className="overlay"></div>
       </div>
-      <nav id="navbar">
+      <nav id="navbar" className="hover:backdrop-blur">
         <div className={`menu ${menState ? "menu-open" : ""}`}>
           <div>
             <ul>

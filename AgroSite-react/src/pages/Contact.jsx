@@ -23,7 +23,9 @@ function Header() {
   return (
     <section id="about-nav">
       <h2>#ContactUs</h2>
-      <p>LEAVE A MESSAGE.We love to hear from you!</p>
+      <p className="text-gray-900">
+        Leave a message. We love to hear from you!
+      </p>
     </section>
   );
 }
@@ -74,7 +76,7 @@ function CForm() {
     <section id="c-form">
       <form action="">
         <span>LEAVE A MESSAGE</span>
-        <h2>love to hear from you</h2>
+        <h2>Love to hear from you</h2>
         <input className="f-input" type="text" placeholder="Your Name" />
         <input className="f-input" type="text" placeholder="E-mail" />
         <input className="f-input" type="text" placeholder="Subject" />
@@ -98,10 +100,10 @@ function CForm() {
         </div>
         <div>
           <p>
-            <span>Kunal Agrawal</span>Back-end devloper
+            <span>Kunal Agrawal</span>Back-end Developer
             <br />
             Phone: +91 8959 55 8869 <br />
-            Email: kunalagrwal@gmail.com
+            Email: kunalagrawal@ssipmt.com
           </p>
         </div>
         <div>

@@ -19,16 +19,19 @@ export default function ApplicationContext({ children }) {
   const [loading, setLoading] = useState(true);
   const [user, setUser] = useState();
   async function signIn() {
+    setLoading(true);
     await setPersistence(auth, browserLocalPersistence).then(() => {
       const provider = new GoogleAuthProvider();
       return signInWithPopup(auth, provider);
     });
+    setLoading(false);
   }
   async function signOutApp() {
     await signOut(auth);
     setUser(null);
   }
   useEffect(() => {
+    setLoading(true);
     onAuthStateChanged(auth, (u) => {
       if (u) {
         setUser(u);

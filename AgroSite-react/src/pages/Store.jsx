@@ -23,7 +23,9 @@ function ShopNav() {
   return (
     <section id="shop-nav">
       <h2>#Buyrelivently</h2>
-      <p>Save more with coupons &amp; low down payment</p>
+      <p className="text-gray-900">
+        Save more with coupons &amp; low down payment
+      </p>
     </section>
   );
 }

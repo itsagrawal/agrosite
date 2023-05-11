@@ -1,6 +1,7 @@
 import AppJPG from "../../assets/app.jpg";
 import PlayJGP from "../../assets/play.jpg";
 import PayPNG from "../../assets/pay.png";
+import { Link } from "react-router-dom";
 export default function Footer() {
   return (
     <footer className="static mt-4">
@@ -33,8 +34,8 @@ export default function Footer() {
         <h4>About</h4>
         <a href="./pages/about.html">About us</a>
         <a href="./pages/about.html">Delivery Information</a>
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms & Conditions</a>
+        <Link to="/">Buyer Portal</Link>
+        <Link to="/seller">Seller Portal</Link>
         <a href="./pages/contact.html">Contact Us</a>
       </div>
       <div className="col">

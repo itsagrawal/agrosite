@@ -13,7 +13,7 @@ export default function SellerOrBuyerModal({ isOpen, setIsOpen }) {
     <Transition appear show={isOpen} as={Fragment}>
       <Dialog
         as="div"
-        className="select-none relative z-10"
+        className="select-none relative z-50"
         onClose={closeModal}
       >
         <Transition.Child
@@ -50,7 +50,16 @@ export default function SellerOrBuyerModal({ isOpen, setIsOpen }) {
                   <FeatureSeller />
                 </div>
 
-                <div className="mt-4">
+                <div className="mt-4 flex gap-x-4">
+                  <button
+                    type="button"
+                    className="inline-flex justify-center rounded-md border border-transparent bg-red-100 px-4 py-2 text-sm font-medium text-red-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2 items-center gap-x-2"
+                    onClick={() => {
+                      setIsOpen(false);
+                    }}
+                  >
+                    Close
+                  </button>
                   <button
                     type="button"
                     className="inline-flex justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 items-center gap-x-2"

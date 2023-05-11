@@ -1,13 +1,12 @@
-import React from "react";
-import SellerRegister from "../components/forms/SellerRegister";
+import ProductCreateForm from "../components/forms/ProductCreate";
 import SellerNavbar from "../components/navbar/SellerNavbar";
 import Footer from "../components/footer/Footer";
 
-export default function SellerRegisterPage() {
+export default function ProductCreate() {
   return (
     <div>
       <SellerNavbar />
-      <SellerRegister />
+      <ProductCreateForm />
       <Footer />
     </div>
   );

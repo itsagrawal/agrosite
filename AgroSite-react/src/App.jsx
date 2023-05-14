@@ -17,7 +17,7 @@ export default function App() {
   useEffect(() => {
     new Promise((res) => {
       setTimeout(() => {
-        if (!user) setSignModal(true);
+        if (user === false) setSignModal(true);
         else setSignModal(false);
         res();
       }, 200);
@@ -26,7 +26,7 @@ export default function App() {
 
   return (
     <>
-      {loading ? (
+      {loading || user === undefined ? (
         <FullPageLoader />
       ) : (
         <div className="select-none static">

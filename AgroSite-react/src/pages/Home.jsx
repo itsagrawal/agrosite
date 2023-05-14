@@ -6,15 +6,14 @@ import NewsLetter from "../components/newsletter/NewsLetter";
 import Footer from "../components/footer/Footer";
 import Feature from "../components/feature/Feature";
 import SellerOrBuyerModal from "../components/modals/SellerOrBuyerModal";
+import useSeller from "../hooks/useSeller";
+import useProduct from "../hooks/useProducts";
 
 export default function Home() {
-  const [isOpenModal, setModal] = useState(false);
+  const res = useSeller();
+  let v = Boolean(res);
+  const [isOpenModal, setModal] = useState(v);
   const { user } = useAppContext();
-  useEffect(() => {
-    setTimeout(() => {
-      if (user) setModal(true);
-    }, 3000);
-  }, [user]);
   return (
     <>
       <Helmet>
@@ -22,7 +21,7 @@ export default function Home() {
       </Helmet>
       <Header />
       <Feature />
-      <ProductList />
+      <ProductList2 />
       <NewsLetter />
       <Footer />
       <SellerOrBuyerModal isOpen={isOpenModal} setIsOpen={setModal} />
@@ -48,12 +47,60 @@ function Header() {
   );
 }
 
+function ProductList2() {
+  const products = useProduct();
+  const [prods, setProds] = useState([]);
+  useEffect(() => {
+    (async () => {
+      await products.then((v) => {
+        setProds(v);
+      });
+    })();
+  }, []);
+  return (
+    <div className="flex gap-x-4 flex-wrap justify-center ">
+      {prods.map((v) => {
+        return (
+          <div
+            key={v.id}
+            className="mt-16 border bg-white py-4 px-2 max-w-sm rounded-md"
+            onClick={() => {}}
+          >
+            <img
+              src={v.image}
+              alt=""
+              className=" w-60 aspect-square object-contain"
+            />
+            <div className="des">
+              <span>{v.brandName}</span>
+              <h5>{v.name}</h5>
+              <div className="star">
+                <i className="fas fa-star"></i>
+                <i className="fas fa-star"></i>
+                <i className="fas fa-star"></i>
+                <i className="fas fa-star"></i>
+                <i className="fas fa-star"></i>
+              </div>
+              <h4>
+                <i className="fa fa-rupee"></i> {v.price}
+              </h4>
+            </div>
+            <a href={v.image}>
+              <i className="fal fa-shopping-cart cart"></i>
+            </a>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
 // Section 3
 function ProductList() {
   return (
     <section id="product1" className="section-p1">
       <h2>Featured Products</h2>
-      <p>New Modern farm Vehicals</p>
+      <p>New Modern farm Vehicles</p>
       <div className="pro-container">
         <div className="pro" onClick={() => {}}>
           <img src="./assets/t6 combine.avif" alt="" />
@@ -67,7 +114,9 @@ function ProductList() {
               <i className="fas fa-star"></i>
               <i className="fas fa-star"></i>
             </div>
-            <h4>$123</h4>
+            <h4>
+              <i className="fa fa-rupee"></i> 123
+            </h4>
           </div>
           <a href="./assets/cart.html">
             <i className="fal fa-shopping-cart cart"></i>
@@ -85,7 +134,9 @@ function ProductList() {
               <i className="fas fa-star"></i>
               <i className="fas fa-star"></i>
             </div>
-            <h4>$123</h4>
+            <h4>
+              <i className="fa fa-rupee"></i> 123
+            </h4>
           </div>
           <a href="./pages/cart.html">
             <i className="fal fa-shopping-cart cart"></i>
@@ -103,7 +154,9 @@ function ProductList() {
               <i className="fas fa-star"></i>
               <i className="fas fa-star"></i>
             </div>
-            <h4>$123</h4>
+            <h4>
+              <i className="fa fa-rupee"></i> 123
+            </h4>
           </div>
           <a href="./pages/cart.html">
             <i className="fal fa-shopping-cart cart"></i>
@@ -121,7 +174,9 @@ function ProductList() {
               <i className="fas fa-star"></i>
               <i className="fas fa-star"></i>
             </div>
-            <h4>$123</h4>
+            <h4>
+              <i className="fa fa-rupee"></i> 123
+            </h4>
           </div>
           <a href="./pages/cart.html">
             <i className="fal fa-shopping-cart cart"></i>
@@ -139,7 +194,9 @@ function ProductList() {
               <i className="fas fa-star"></i>
               <i className="fas fa-star"></i>
             </div>
-            <h4>$123</h4>
+            <h4>
+              <i className="fa fa-rupee"></i> 123
+            </h4>
           </div>
           <a href="./pages/cart.html">
             <i className="fal fa-shopping-cart cart"></i>
@@ -157,7 +214,9 @@ function ProductList() {
               <i className="fas fa-star"></i>
               <i className="fas fa-star"></i>
             </div>
-            <h4>$123</h4>
+            <h4>
+              <i className="fa fa-rupee"></i> 123
+            </h4>
           </div>
           <a href="./pages/cart.html">
             <i className="fal fa-shopping-cart cart"></i>
@@ -175,7 +234,9 @@ function ProductList() {
               <i className="fas fa-star"></i>
               <i className="fas fa-star"></i>
             </div>
-            <h4>$123</h4>
+            <h4>
+              <i className="fa fa-rupee"></i> 123
+            </h4>
           </div>
           <a href="./pages/cart.html">
             <i className="fal fa-shopping-cart cart"></i>
@@ -193,7 +254,9 @@ function ProductList() {
               <i className="fas fa-star"></i>
               <i className="fas fa-star"></i>
             </div>
-            <h4>$123</h4>
+            <h4>
+              <i className="fa fa-rupee"></i> 123
+            </h4>
           </div>
           <a href="./pages/cart.html">
             <i className="fal fa-shopping-cart cart"></i>

@@ -17,7 +17,7 @@ export const useAppContext = () => {
 
 export default function ApplicationContext({ children }) {
   const [loading, setLoading] = useState(true);
-  const [user, setUser] = useState();
+  const [user, setUser] = useState(undefined);
   async function signIn() {
     setLoading(true);
     await setPersistence(auth, browserLocalPersistence).then(() => {
@@ -35,10 +35,12 @@ export default function ApplicationContext({ children }) {
     onAuthStateChanged(auth, (u) => {
       if (u) {
         setUser(u);
+      } else {
+        setUser(false);
       }
     });
     setLoading(false);
   }, []);
-  const value = { user, signIn, signOutApp, loading };
+  const value = { user, signIn, signOutApp, loading, setLoading };
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 }

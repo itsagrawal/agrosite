@@ -7,7 +7,7 @@ import {
   browserLocalPersistence,
 } from "firebase/auth";
 import { useContext, useState, useEffect, createContext } from "react";
-import { auth, db } from "./firebase";
+import { auth } from "./firebase";
 
 export const AppContext = createContext();
 

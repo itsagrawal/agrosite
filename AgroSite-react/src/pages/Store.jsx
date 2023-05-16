@@ -2,8 +2,10 @@ import Navbar from "../components/navbar/Navbar";
 import Helmet from "react-helmet";
 import NewsLetter from "../components/newsletter/NewsLetter";
 import Footer from "../components/footer/Footer";
-import useProduct, { useProduct2 } from "../hooks/useProducts";
+import { useProduct2 } from "../hooks/useProducts";
 import { useEffect, useState } from "react";
+import ProductContainer from "../components/containers/ProductContainer";
+import ProductCard from "../components/cards/ProductCard";
 export default function Store() {
   return (
     <>
@@ -42,40 +44,11 @@ function ProductList2() {
     })();
   }, []);
   return (
-    <div className="flex gap-x-4 flex-wrap justify-center ">
-      {prods.map((v) => {
-        return (
-          <div
-            key={v.id}
-            className="mt-16 border bg-white py-4 px-2 max-w-sm rounded-md"
-            onClick={() => {}}
-          >
-            <img
-              src={v.image}
-              alt=""
-              className=" w-60 aspect-square object-contain"
-            />
-            <div className="des">
-              <span>{v.brandName}</span>
-              <h5>{v.name}</h5>
-              <div className="star">
-                <i className="fas fa-star"></i>
-                <i className="fas fa-star"></i>
-                <i className="fas fa-star"></i>
-                <i className="fas fa-star"></i>
-                <i className="fas fa-star"></i>
-              </div>
-              <h4>
-                <i className="fa fa-rupee"></i> {v.price}
-              </h4>
-            </div>
-            <a href={v.image}>
-              <i className="fal fa-shopping-cart cart"></i>
-            </a>
-          </div>
-        );
+    <ProductContainer>
+      {prods.map((v, idx) => {
+        return <ProductCard v={v} key={idx} />;
       })}
-    </div>
+    </ProductContainer>
   );
 }
 

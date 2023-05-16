@@ -8,6 +8,8 @@ import Feature from "../components/feature/Feature";
 import SellerOrBuyerModal from "../components/modals/SellerOrBuyerModal";
 import useSeller from "../hooks/useSeller";
 import useProduct from "../hooks/useProducts";
+import ProductCard from "../components/cards/ProductCard";
+import ProductContainer from "../components/containers/ProductContainer";
 
 export default function Home() {
   const res = useSeller();
@@ -58,40 +60,11 @@ function ProductList2() {
     })();
   }, []);
   return (
-    <div className="flex gap-x-4 flex-wrap justify-center ">
-      {prods.map((v) => {
-        return (
-          <div
-            key={v.id}
-            className="mt-16 border bg-white py-4 px-2 max-w-sm rounded-md"
-            onClick={() => {}}
-          >
-            <img
-              src={v.image}
-              alt=""
-              className=" w-60 aspect-square object-contain"
-            />
-            <div className="des">
-              <span>{v.brandName}</span>
-              <h5>{v.name}</h5>
-              <div className="star">
-                <i className="fas fa-star"></i>
-                <i className="fas fa-star"></i>
-                <i className="fas fa-star"></i>
-                <i className="fas fa-star"></i>
-                <i className="fas fa-star"></i>
-              </div>
-              <h4>
-                <i className="fa fa-rupee"></i> {v.price}
-              </h4>
-            </div>
-            <a href={v.image}>
-              <i className="fal fa-shopping-cart cart"></i>
-            </a>
-          </div>
-        );
+    <ProductContainer>
+      {prods.map((v, idx) => {
+        return <ProductCard v={v} key={idx} />;
       })}
-    </div>
+    </ProductContainer>
   );
 }
 

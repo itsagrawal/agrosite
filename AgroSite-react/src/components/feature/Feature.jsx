@@ -3,6 +3,8 @@ import CombineSVG from "../../assets/combine.svg";
 import RotavatorSVG from "../../assets/rotavator.svg";
 import SeederSVG from "../../assets/seeder.svg";
 import SprayerSVG from "../../assets/sprayer.svg";
+import { v4 } from "uuid";
+
 export default function CategoryFeature() {
   const Categories = [
     {
@@ -40,7 +42,7 @@ export default function CategoryFeature() {
       <div className="c-con">
         {Categories.map((v, idx) => {
           return (
-            <div className="card wallet" key={idx}>
+            <div className="card wallet" key={v4()}>
               <div className="over"></div>
               <div className="circle">
                 <img src={v.image} />

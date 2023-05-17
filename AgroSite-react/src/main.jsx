@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from "react";
+import { lazy, Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
@@ -9,13 +9,11 @@ const ApplicationContext = lazy(() =>
 );
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <Suspense fallback={FullPageLoader}>
-      <ApplicationContext>
-        <Router>
-          <App />
-        </Router>
-      </ApplicationContext>
-    </Suspense>
-  </React.StrictMode>
+  <Suspense fallback={FullPageLoader}>
+    <ApplicationContext>
+      <Router>
+        <App />
+      </Router>
+    </ApplicationContext>
+  </Suspense>
 );

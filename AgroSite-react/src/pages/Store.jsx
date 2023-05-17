@@ -6,7 +6,15 @@ import { useProduct2 } from "../hooks/useProducts";
 import { useEffect, useState } from "react";
 import ProductContainer from "../components/containers/ProductContainer";
 import ProductCard from "../components/cards/ProductCard";
+import useLocation from "../hooks/useLocation";
+import { v4 } from "uuid";
+import { getDoc } from "firebase/firestore";
+import { CategoryDoc } from "../firebase/dbReferences";
+import useCategory from "../hooks/useCategory";
+
 export default function Store() {
+  const locs = useLocation();
+  const cates = useCategory();
   return (
     <>
       <Helmet>
@@ -14,6 +22,29 @@ export default function Store() {
       </Helmet>
       <Navbar />
       <ShopNav />
+      <div className="max-w-4xl md:mx-auto flex mt-10 -mb-4 justify-between mx-4 flex-col md:flex-row gap-y-2">
+        <h2 className="text-gray-400 text-3xl">Products</h2>
+        <div className="flex gap-x-2 text-xs md:text-base">
+          <select name="category" id="category" className="px-2 rounded">
+            {["Select Category", ...Object.keys(cates)].map((v) => {
+              return (
+                <option value={v} key={v4()}>
+                  {v}
+                </option>
+              );
+            })}
+          </select>
+          <select name="location" id="location" className="px-2 rounded">
+            {["Select Location", ...locs].map((v) => {
+              return (
+                <option value={v} key={v4()}>
+                  {v}
+                </option>
+              );
+            })}
+          </select>
+        </div>
+      </div>
       <ProductList2 />
       <NewsLetter />
       <Footer />
@@ -35,18 +66,10 @@ function ShopNav() {
 
 function ProductList2() {
   const products = useProduct2();
-  const [prods, setProds] = useState([]);
-  useEffect(() => {
-    (async () => {
-      await products.then((v) => {
-        setProds(v);
-      });
-    })();
-  }, []);
   return (
     <ProductContainer>
-      {prods.map((v, idx) => {
-        return <ProductCard v={v} key={idx} />;
+      {products.map((v) => {
+        return <ProductCard v={v} key={v4()} />;
       })}
     </ProductContainer>
   );

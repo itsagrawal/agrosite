@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Tab } from "@headlessui/react";
+import { v4 } from "uuid";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -63,7 +64,7 @@ export default function Example() {
         <Tab.List className="flex space-x-1 rounded-xl bg-blue-900/20 p-1">
           {Object.keys(categories).map((category) => (
             <Tab
-              key={category}
+              key={v4()}
               className={({ selected }) =>
                 classNames(
                   "w-full rounded-lg py-2.5 text-sm font-medium leading-5 text-blue-700",
@@ -81,7 +82,7 @@ export default function Example() {
         <Tab.Panels className="mt-2">
           {Object.values(categories).map((posts, idx) => (
             <Tab.Panel
-              key={idx}
+              key={v4()}
               className={classNames(
                 "rounded-xl bg-white p-3",
                 "ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2"

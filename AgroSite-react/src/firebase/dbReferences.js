@@ -27,3 +27,5 @@ export const sellerCollection = collection(db, "sellers");
 export const sellerDoc = (Suid) => {
   return doc(sellerCollection, Suid);
 };
+
+export const FaqDoc = doc(collection(db, "faqs"), "faqs");

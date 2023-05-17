@@ -10,6 +10,7 @@ import useSeller from "../hooks/useSeller";
 import useProduct from "../hooks/useProducts";
 import ProductCard from "../components/cards/ProductCard";
 import ProductContainer from "../components/containers/ProductContainer";
+import { v4 } from "uuid";
 
 export default function Home() {
   const res = useSeller();
@@ -51,20 +52,14 @@ function Header() {
 
 function ProductList2() {
   const products = useProduct();
-  const [prods, setProds] = useState([]);
-  useEffect(() => {
-    (async () => {
-      await products.then((v) => {
-        setProds(v);
-      });
-    })();
-  }, []);
   return (
-    <ProductContainer>
-      {prods.map((v, idx) => {
-        return <ProductCard v={v} key={idx} />;
-      })}
-    </ProductContainer>
+    <div className="mt-32">
+      <ProductContainer>
+        {products.map((v) => {
+          return <ProductCard v={v} key={v4()} />;
+        })}
+      </ProductContainer>
+    </div>
   );
 }
 

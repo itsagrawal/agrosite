@@ -7,11 +7,13 @@
     "dev": "vite --host",
     "build": "vite build",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview --port 80"
+    "preview": "vite preview --port 80",
+    "codeformat": "npx prettier -w ."
   },
   "dependencies": {
     "@headlessui/react": "^1.7.14",
     "firebase": "^9.21.0",
+    "heroicons": "^2.0.18",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",

@@ -5,10 +5,13 @@ const Store = lazy(() => import("./pages/Store"));
 const About = lazy(() => import("./pages/About"));
 const Contact = lazy(() => import("./pages/Contact"));
 const Seller = lazy(() => import("./pages/Seller"));
+const ProductPage = lazy(() => import("./pages/Product.jsx"));
 import { useAppContext } from "./firebase/ApplicationContext";
 import FullPageLoader from "./components/Loader/FullPageLoader";
 const FoF = lazy(() => import("./pages/404"));
 import SignInModal from "./components/modals/SignInModal";
+import FAQs from "./pages/FAQs";
+import Order from "./pages/Order";
 
 export default function App() {
   const { loading, user } = useAppContext();
@@ -72,6 +75,19 @@ export default function App() {
                 </Suspense>
               }
             ></Route>
+
+            <Route
+              path="product"
+              element={
+                <Suspense>
+                  <ProductPage />
+                </Suspense>
+              }
+            />
+            <Route path="faqs" element={<FAQs />} />
+            <Route path="order" element={<Order />} />
+
+            {/* 404 Route */}
             <Route
               path="/*"
               element={

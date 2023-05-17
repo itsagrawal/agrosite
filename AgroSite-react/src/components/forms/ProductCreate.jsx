@@ -9,7 +9,7 @@ import {
 } from "../../firebase/dbReferences";
 import { useAppContext } from "../../firebase/ApplicationContext";
 import { useNavigate } from "react-router-dom";
-import { v4 as UUID } from "uuid";
+import { v4 as UUID, v4 } from "uuid";
 import { getDownloadURL, uploadBytes } from "firebase/storage";
 import { prodcutsReference } from "../../firebase/storageReferences";
 
@@ -27,7 +27,7 @@ export default function ProductCreate() {
       await getDoc(LocationDoc).then((v) => {
         let x = v.data().locations;
         x.sort();
-        setLocs(x);
+        setLocs(["Undefined", ...x]);
       });
     })();
   }, []);
@@ -137,9 +137,9 @@ export default function ProductCreate() {
               }}
             >
               {/* TODO: Add Options Here */}
-              {Object.keys(cates).map((v, idx) => {
+              {["Undefined", ...Object.keys(cates)].map((v, idx) => {
                 return (
-                  <option value={v} key={idx}>
+                  <option value={v} key={v4()}>
                     {v}
                   </option>
                 );
@@ -192,7 +192,7 @@ export default function ProductCreate() {
               {/* TODO : Add option of locations here */}
               {locs.map((v, idx) => {
                 return (
-                  <option value={v} key={idx}>
+                  <option value={v} key={v4()}>
                     {v}
                   </option>
                 );

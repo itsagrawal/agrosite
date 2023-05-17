@@ -8,6 +8,7 @@ import { getDownloadURL, uploadBytes } from "firebase/storage";
 import { setDoc } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
 import FullPageLoader from "../Loader/FullPageLoader";
+import { v4 } from "uuid";
 
 export default function SellerRegister() {
   const { loading, setLoading, user } = useAppContext();
@@ -100,7 +101,7 @@ export default function SellerRegister() {
                   {/* Todo Add Options Available */}
                   {locs.map((v, idx) => {
                     return (
-                      <option value={v} key={idx}>
+                      <option value={v} key={v4()}>
                         {v}
                       </option>
                     );

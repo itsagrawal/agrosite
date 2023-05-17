@@ -1,4 +1,5 @@
 import { useSpring, animated } from "react-spring";
+import { v4 } from "uuid";
 
 const AnimatedTitle = () => {
   const titleAnimation = useSpring({
@@ -30,6 +31,7 @@ const AnimatedTitle = () => {
             <animated.span
               style={letterAnimation}
               className="inline-block mr-2"
+              key={v4()}
             >
               {v}
             </animated.span>

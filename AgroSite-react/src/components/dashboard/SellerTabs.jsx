@@ -1,63 +1,27 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Tab } from "@headlessui/react";
 import { v4 } from "uuid";
+import { useProductBySeller } from "../../hooks/useProducts";
+import { auth } from "../../firebase/firebase";
+import { useAppContext } from "../../firebase/ApplicationContext";
+import ProductContainer from "../containers/ProductContainer";
+import ProductCard from "../cards/ProductCard";
+import FullPageLoader from "../Loader/FullPageLoader";
+import { useGetSeller } from "../../hooks/useSeller";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
 export default function Example() {
-  let [categories] = useState({
-    Orders: [
-      {
-        id: 1,
-        title: "Does drinking coffee make you smarter?",
-        date: "5h ago",
-        commentCount: 5,
-        shareCount: 2,
-      },
-      {
-        id: 2,
-        title: "So you've bought coffee... now what?",
-        date: "2h ago",
-        commentCount: 3,
-        shareCount: 2,
-      },
-    ],
-    Inventory: [
-      {
-        id: 1,
-        title: "Is tech making coffee better or worse?",
-        date: "Jan 7",
-        commentCount: 29,
-        shareCount: 16,
-      },
-      {
-        id: 2,
-        title: "The most innovative things happening in coffee",
-        date: "Mar 19",
-        commentCount: 24,
-        shareCount: 12,
-      },
-    ],
-    Profile: [
-      {
-        id: 1,
-        title: "Ask Me Anything: 10 answers to your questions about coffee",
-        date: "2d ago",
-        commentCount: 9,
-        shareCount: 5,
-      },
-      {
-        id: 2,
-        title: "The worst advice we've ever heard about coffee",
-        date: "4d ago",
-        commentCount: 1,
-        shareCount: 2,
-      },
-    ],
+  const prods = useProductBySeller();
+  let [categories, setCategories] = useState({
+    Orders: [],
+    Inventory: prods,
+    Profile: [],
   });
 
+  if (!prods) return <FullPageLoader />;
   return (
     <div className="w-full max-w-md md:max-w-4xl px-2 mt-6 sm:px-0 mx-auto">
       <Tab.Group>
@@ -80,46 +44,74 @@ export default function Example() {
           ))}
         </Tab.List>
         <Tab.Panels className="mt-2">
-          {Object.values(categories).map((posts, idx) => (
-            <Tab.Panel
-              key={v4()}
-              className={classNames(
-                "rounded-xl bg-white p-3",
-                "ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2"
-              )}
-            >
-              <ul>
-                {posts.map((post) => (
-                  <li
-                    key={post.id}
-                    className="relative rounded-md p-3 hover:bg-gray-100"
-                  >
-                    <h3 className="text-sm font-medium leading-5">
-                      {post.title}
-                    </h3>
-
-                    <ul className="mt-1 flex space-x-1 text-xs font-normal leading-4 text-gray-500">
-                      <li>{post.date}</li>
-                      <li>&middot;</li>
-                      <li>{post.commentCount} comments</li>
-                      <li>&middot;</li>
-                      <li>{post.shareCount} shares</li>
-                    </ul>
-
-                    <a
-                      href="#"
-                      className={classNames(
-                        "absolute inset-0 rounded-md",
-                        "ring-blue-400 focus:z-10 focus:outline-none focus:ring-2"
-                      )}
-                    />
-                  </li>
-                ))}
-              </ul>
-            </Tab.Panel>
-          ))}
+          <Tab.Panel
+            className={classNames(
+              "rounded-xl bg-white p-3",
+              "ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2"
+            )}
+          >
+            Orders are coming soon.
+          </Tab.Panel>
+          <Tab.Panel
+            className={classNames(
+              "rounded-xl bg-white p-3 py-6 px-4",
+              "ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2"
+            )}
+          >
+            <h2 className="font-semibold text-2xl text-gray-500">
+              Your Inventory
+            </h2>
+            <ProductContainer>
+              {prods.map((v) => {
+                return <ProductCard v={v} key={v4()} />;
+              })}
+            </ProductContainer>
+          </Tab.Panel>
+          <SellerProfile />
         </Tab.Panels>
       </Tab.Group>
     </div>
+  );
+}
+
+function SellerProfile() {
+  const seller = useGetSeller();
+  return (
+    <Tab.Panel
+      className={classNames(
+        "rounded-xl bg-white p-3 py-6",
+        "ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2"
+      )}
+    >
+      <div className="flex flex-col gap-y-4">
+        <h3 className="font-semibold text-2xl text-gray-500">Your Workplace</h3>
+        <div className="grid md:grid-cols-2">
+          <div className="flex items-center">
+            <img src={seller.sellerImage} alt="" className="h-48 mx-auto" />
+          </div>
+          <div className="flex flex-col justify-between py-4">
+            <div>
+              Seller Name:{" "}
+              <span className="font-bold ml-2">{seller.sellerName}</span>
+            </div>
+            <div>
+              GST Name: <span className="font-bold ml-2">{seller.GSTName}</span>
+            </div>
+            <div>
+              GST Number:{" "}
+              <span className="font-bold ml-2">{seller.GSTNumber}</span>
+            </div>
+            <div>
+              Seller Location:{" "}
+              <span className="font-bold ml-2">{seller.sellerLocation}</span>
+            </div>
+            {/* Seller Name */}
+            {/* GST Name */}
+            {/* GST Number */}
+            {/* Seller Location */}
+          </div>
+        </div>
+      </div>
+    </Tab.Panel>
   );
 }

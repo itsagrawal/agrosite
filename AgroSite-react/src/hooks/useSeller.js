@@ -1,6 +1,7 @@
 import { getDoc } from "firebase/firestore";
 import { useAppContext } from "../firebase/ApplicationContext";
 import { sellerDoc } from "../firebase/dbReferences";
+import { useEffect, useState } from "react";
 
 const useSeller = async () => {
   const { user } = useAppContext();
@@ -17,3 +18,17 @@ const useSeller = async () => {
   return false;
 };
 export default useSeller;
+
+export const useGetSeller = () => {
+  const [seller, setSeller] = useState({});
+  const { user } = useAppContext();
+  useEffect(() => {
+    if (user) {
+      const sellDoc = sellerDoc(user.uid + "seller");
+      getDoc(sellDoc).then((v) => {
+        setSeller(v.data());
+      });
+    }
+  }, []);
+  return seller;
+};

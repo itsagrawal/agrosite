@@ -4,6 +4,7 @@ import RotavatorSVG from "../../assets/rotavator.svg";
 import SeederSVG from "../../assets/seeder.svg";
 import SprayerSVG from "../../assets/sprayer.svg";
 import { v4 } from "uuid";
+import { useNavigate } from "react-router-dom";
 
 export default function CategoryFeature() {
   const Categories = [
@@ -28,6 +29,7 @@ export default function CategoryFeature() {
       image: SprayerSVG,
     },
   ];
+  const navigate = useNavigate();
   return (
     <section id="feature">
       <div className="f-text">
@@ -40,9 +42,15 @@ export default function CategoryFeature() {
         </h2>
       </div>
       <div className="c-con">
-        {Categories.map((v, idx) => {
+        {Categories.map((v) => {
           return (
-            <div className="card wallet" key={v4()}>
+            <div
+              className="card wallet"
+              key={v4()}
+              onClick={(e) => {
+                navigate(`/product/category/${v.name}`);
+              }}
+            >
               <div className="over"></div>
               <div className="circle">
                 <img src={v.image} />

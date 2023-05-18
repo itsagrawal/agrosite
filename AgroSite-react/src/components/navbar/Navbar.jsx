@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { useAppContext } from "../../firebase/ApplicationContext";
 export default function Navbar() {
   const [menState, setState] = useState(false);
@@ -45,18 +45,7 @@ export default function Navbar() {
                 </a>
               </li>
             </ul>
-            <form>
-              <div className="input-wrap flex gap-x-3">
-                <input
-                  type="search"
-                  placeholder="Search..."
-                  className="px-2 rounded"
-                />
-                <button type="submit">
-                  <i className="fas fa-search"></i>
-                </button>
-              </div>
-            </form>
+            <SearchForm />
           </div>
         </div>
         <div className="container">
@@ -79,19 +68,7 @@ export default function Navbar() {
               </li>
               <LogInBtn />
             </ul>
-            <form>
-              <div className="input-wrap">
-                <input
-                  id="n-input"
-                  type="search"
-                  placeholder="Search.."
-                  className="px-2 rounded"
-                />
-                <button type="submit">
-                  <i className="fas fa-search"></i>
-                </button>
-              </div>
-            </form>
+            <SearhForm2 />
           </div>
           <i
             className="fas fa-bars"
@@ -130,3 +107,52 @@ const LogInBtn = () => {
     </li>
   );
 };
+function SearchForm() {
+  const navigate = useNavigate();
+
+  return (
+    <form
+      onSubmit={(e) => {
+        e.preventDefault();
+        navigate(`/product/search/${e.target.search.value}`);
+      }}
+    >
+      <div className="input-wrap flex gap-x-3">
+        <input
+          type="search"
+          placeholder="Search..."
+          className="px-2 rounded text-black"
+          name="search"
+        />
+        <button type="submit">
+          <i className="fas fa-search"></i>
+        </button>
+      </div>
+    </form>
+  );
+}
+
+function SearhForm2() {
+  const navigate = useNavigate();
+  return (
+    <form
+      onSubmit={(e) => {
+        e.preventDefault();
+        navigate(`/product/search/${e.target.search.value}`);
+      }}
+    >
+      <div className="input-wrap">
+        <input
+          id="n-input"
+          type="search"
+          placeholder="Search.."
+          className="px-2 rounded"
+          name="search"
+        />
+        <button type="submit">
+          <i className="fas fa-search"></i>
+        </button>
+      </div>
+    </form>
+  );
+}

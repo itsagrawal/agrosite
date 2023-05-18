@@ -77,7 +77,7 @@ export default function App() {
             ></Route>
 
             <Route
-              path="product"
+              path="product/*"
               element={
                 <Suspense>
                   <ProductPage />

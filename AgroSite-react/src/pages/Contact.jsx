@@ -93,14 +93,14 @@ function CForm() {
       <div className="people">
         <div>
           <p>
-            <span>Prabhat Chuabey</span>Fron-tend devloper||ui designer <br />
+            <span>Prabhat Chaubey</span>Frontend Developer <br />
             Phone: +91 7000 90 1447 <br />
             Email: Prabhatchaubey803@gmail.com
           </p>
         </div>
         <div>
           <p>
-            <span>Kunal Agrawal</span>Back-end Developer
+            <span>Kunal Agrawal</span>Full-Stack Developer
             <br />
             Phone: +91 8959 55 8869 <br />
             Email: kunalagrawal@ssipmt.com
@@ -108,7 +108,7 @@ function CForm() {
         </div>
         <div>
           <p>
-            <span>Himanshu jha</span>Frontend devloper
+            <span>Himanshu Jha</span>Frontend Developer
             <br />
             Phone: +91 9752 29 9212 <br />
             Email: Himanshujha@ssipmt.com
@@ -116,7 +116,7 @@ function CForm() {
         </div>
         <div>
           <p>
-            <span>Vaibhav ghanekar</span>Frontend devloper
+            <span>Vaibhav Ghanekar</span>Frontend Developer
             <br />
             Phone: +91 9644 58 2521 <br />
             Email: Himanshujha@ssipmt.com

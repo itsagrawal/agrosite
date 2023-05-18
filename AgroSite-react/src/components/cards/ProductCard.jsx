@@ -1,10 +1,14 @@
+import { useNavigate } from "react-router-dom";
 import { v4 } from "uuid";
 export default function ProductCard({ v }) {
+  const navigate = useNavigate();
   return (
     <div
       key={v.id}
-      className="border bg-white py-4 px-6 shadow max-w-sm rounded-md flex flex-col gap-y-2 pb-4"
-      onClick={() => {}}
+      className="border bg-white py-4 px-6 shadow max-w-sm rounded-md flex flex-col gap-y-2 pb-4 items-center"
+      onClick={() => {
+        navigate(`/product/${v.id}`);
+      }}
     >
       <img
         src={v.image}

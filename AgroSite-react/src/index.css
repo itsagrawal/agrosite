@@ -5,6 +5,10 @@
 @import url("https://pro.fontawesome.com/releases/v5.10.0/css/all.css");
 @import url("https://fonts.googleapis.com/css?family=Spartan");
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
@@ -135,6 +139,10 @@ nav {
 
 .brand {
   font-size: 1.6em;
+}
+
+.brand:hover {
+  color: initial;
 }
 
 .brand span {
@@ -451,6 +459,7 @@ section p {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  row-gap: 20px;
 }
 
 .wallet {
@@ -514,7 +523,7 @@ section p {
   letter-spacing: -0.05em;
   text-align: center;
   max-width: 140px;
-  z-index: 1000;
+  z-index: 5;
   transition: color 0.3s ease-out;
 }
 
@@ -536,7 +545,7 @@ section p {
   /* position: relative; */
   width: 75%;
   height: 75%;
-  z-index: 10000;
+  z-index: 5;
 }
 
 .z img {
@@ -661,7 +670,7 @@ section p {
 /* footeer*************************************************************************************************************************** */
 
 #newsletter {
-  margin: 80px 0;
+  margin: 120px 0;
   padding: 57px 33px;
   display: flex;
   justify-content: space-between;
@@ -801,7 +810,7 @@ footer .copyright {
 /* shop-page************************************************************************************ */
 
 #shop-nav {
-  background-image: url("assets/polotno\ \(2\).png");
+  background-image: url("assets/polotno.png");
   width: 100%;
   height: 50vh;
   background-size: cover;
@@ -881,7 +890,7 @@ footer .copyright {
 /* about page***************************************************************************************************************** */
 
 #about-nav {
-  background-image: url("assets/polotno\ \(2\).png");
+  background-image: url("assets/polotno.png");
   width: 100%;
   height: 50vh;
   background-size: cover;
@@ -1064,7 +1073,7 @@ footer .copyright {
 
 #cart-nav {
   /* background-color: #c3c0c0; */
-  background-image: url("assets/polotno\ \(2\).png");
+  background-image: url("assets/polotno.png");
   width: 100%;
   height: 50vh;
   background-size: cover;

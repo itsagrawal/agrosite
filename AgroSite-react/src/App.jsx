@@ -1,16 +1,105 @@
 import { Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import Store from "./pages/Store";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
+import { Suspense, lazy, useEffect, useState } from "react";
+const Home = lazy(() => import("./pages/Home"));
+const Store = lazy(() => import("./pages/Store"));
+const About = lazy(() => import("./pages/About"));
+const Contact = lazy(() => import("./pages/Contact"));
+const Seller = lazy(() => import("./pages/Seller"));
+const ProductPage = lazy(() => import("./pages/Product.jsx"));
+import { useAppContext } from "./firebase/ApplicationContext";
+import FullPageLoader from "./components/Loader/FullPageLoader";
+const FoF = lazy(() => import("./pages/404"));
+import SignInModal from "./components/modals/SignInModal";
+import FAQs from "./pages/FAQs";
+import Order from "./pages/Order";
 
 export default function App() {
+  const { loading, user } = useAppContext();
+  // Sign In modal
+  const [showSignInModal, setSignModal] = useState(false);
+  useEffect(() => {
+    new Promise((res) => {
+      setTimeout(() => {
+        if (user === false) setSignModal(true);
+        else setSignModal(false);
+        res();
+      }, 200);
+    });
+  }, [user]);
+
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/store" element={<Store />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/contact" element={<Contact />} />
-    </Routes>
+    <>
+      {loading || user === undefined ? (
+        <FullPageLoader />
+      ) : (
+        <div className="select-none static">
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <Suspense>
+                  <Home />
+                </Suspense>
+              }
+            />
+            <Route
+              path="store"
+              element={
+                <Suspense fallback={<FullPageLoader />}>
+                  <Store />
+                </Suspense>
+              }
+            />
+            <Route
+              path="about"
+              element={
+                <Suspense fallback={<FullPageLoader />}>
+                  <About />
+                </Suspense>
+              }
+            />
+            <Route
+              path="contact"
+              element={
+                <Suspense fallback={<FullPageLoader />}>
+                  <Contact />
+                </Suspense>
+              }
+            />
+            {/* <Route path="/test" element={<Modal isOpen={true} />} /> */}
+            <Route
+              path="seller/*"
+              element={
+                <Suspense fallback={<FullPageLoader />}>
+                  <Seller />
+                </Suspense>
+              }
+            ></Route>
+
+            <Route
+              path="product/*"
+              element={
+                <Suspense>
+                  <ProductPage />
+                </Suspense>
+              }
+            />
+            <Route path="faqs" element={<FAQs />} />
+            <Route path="order" element={<Order />} />
+
+            {/* 404 Route */}
+            <Route
+              path="/*"
+              element={
+                <Suspense>
+                  <FoF />
+                </Suspense>
+              }
+            />
+          </Routes>
+          <SignInModal isOpen={showSignInModal} setIsOpen={setSignModal} />
+        </div>
+      )}
+    </>
   );
 }

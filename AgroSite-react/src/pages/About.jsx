@@ -3,6 +3,7 @@ import Helmet from "react-helmet";
 import NewsLetter from "../components/newsletter/NewsLetter";
 import Footer from "../components/footer/Footer";
 import Feature from "../components/feature/Feature";
+import PEXEL1 from "../assets/pexels-fauxels-3183150.jpg";
 
 export default function About() {
   return (
@@ -25,7 +26,9 @@ function AboutSection() {
   return (
     <section id="about-nav">
       <h2>#KnowUS</h2>
-      <p>Save more with coupons &amp; low down payment</p>
+      <p className="text-gray-900">
+        Save more with coupons &amp; low down payment
+      </p>
     </section>
   );
 }
@@ -34,7 +37,7 @@ function AboutSection() {
 function AboutUs() {
   return (
     <section id="about-head" className="section-p1">
-      <img src="../assets/pexels-fauxels-3183150.jpg" alt="" />
+      <img src={PEXEL1} alt="" />
       <div>
         <h2>Who We Are?</h2>
         <p>
@@ -52,9 +55,10 @@ function AboutUs() {
             scrollAmount: "5",
             width: "100%",
           }}
+          className="bg-gray-200"
         >
-          Thank you for choosing our agrosite. We look forward to serving you
-          and being a part of your success story.
+          Thank you for choosing Agrosite. We look forward to serving you and
+          being a part of your success story.
         </marquee>
       </div>
     </section>

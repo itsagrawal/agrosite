@@ -1,6 +1,12 @@
+import AppJPG from "../../assets/app.jpg";
+import PlayJGP from "../../assets/play.jpg";
+import PayPNG from "../../assets/pay.png";
+import { Link } from "react-router-dom";
+import { useAppContext } from "../../firebase/ApplicationContext";
 export default function Footer() {
+  const { signIn, user } = useAppContext();
   return (
-    <footer>
+    <footer className="static mt-4">
       <div className="col">
         <a href="#" className="brand">
           <span>Agro</span>Site
@@ -28,16 +34,24 @@ export default function Footer() {
       </div>
       <div className="col">
         <h4>About</h4>
-        <a href="./pages/about.html">About us</a>
-        <a href="./pages/about.html">Delivery Information</a>
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms & Conditions</a>
-        <a href="./pages/contact.html">Contact Us</a>
+
+        <Link to="/about">About us</Link>
+        <Link to="/faqs">FAQ's</Link>
+        <Link to="/">Buyer Portal</Link>
+        <Link to="/seller">Seller Portal</Link>
       </div>
       <div className="col">
         <h4>My Accounts</h4>
-        <a href="#">Sign in</a>
-        <a href="./pages/cart.html">View Cart</a>
+        <a
+          href="#"
+          onClick={(e) => {
+            e.preventDefault();
+            if (!user) signIn();
+            else alert("You're already Logged In");
+          }}
+        >
+          Sign in
+        </a>
         <a href="#">My Wislist</a>
         <a href="#">Track My Order</a>
         <a href="#">Help</a>
@@ -46,11 +60,11 @@ export default function Footer() {
         <h4>Install App</h4>
         <p>From App Store or Google Play</p>
         <div className="row">
-          <img src="./assets/app.jpg" alt="" />
-          <img src="./assets/play.jpg" alt="" />
+          <img src={AppJPG} alt="" />
+          <img src={PlayJGP} alt="" />
         </div>
         <p>Secured Payment Gateways</p>
-        <img src="./assets/pay.png " alt="" />
+        <img src={PayPNG} alt="" />
       </div>
       <div className="copyright">
         <p>2023, AgroSite</p>

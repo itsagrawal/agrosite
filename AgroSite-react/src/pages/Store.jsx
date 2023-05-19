@@ -2,8 +2,19 @@ import Navbar from "../components/navbar/Navbar";
 import Helmet from "react-helmet";
 import NewsLetter from "../components/newsletter/NewsLetter";
 import Footer from "../components/footer/Footer";
+import { useProduct2, useProduct3 } from "../hooks/useProducts";
+import { useEffect, useState } from "react";
+import ProductContainer from "../components/containers/ProductContainer";
+import ProductCard from "../components/cards/ProductCard";
+import useLocation from "../hooks/useLocation";
+import { v4 } from "uuid";
+import { getDoc } from "firebase/firestore";
+import { CategoryDoc } from "../firebase/dbReferences";
+import useCategory from "../hooks/useCategory";
 
 export default function Store() {
+  const { locs, cates, prods, selecLoc, selecCate, setSelecCate, setSelecLoc } =
+    useProduct3();
   return (
     <>
       <Helmet>
@@ -11,7 +22,54 @@ export default function Store() {
       </Helmet>
       <Navbar />
       <ShopNav />
-      <ProductList />
+      <div className="max-w-4xl md:mx-auto flex mt-10 -mb-4 justify-between mx-4 flex-col md:flex-row gap-y-2">
+        <h2 className="text-gray-400 text-3xl">Products</h2>
+        <div className="flex gap-x-2 text-xs md:text-base">
+          <select
+            name="category"
+            id="category"
+            className="px-2 rounded"
+            onChange={(e) => {
+              e.preventDefault();
+              setSelecCate(e.target.value);
+            }}
+            value={selecCate}
+          >
+            {["Select Category", ...Object.keys(cates)].map((v) => {
+              return (
+                <option value={v} key={v4()}>
+                  {v}
+                </option>
+              );
+            })}
+          </select>
+          <select
+            value={selecLoc}
+            name="location"
+            id="location"
+            className="px-2 rounded"
+            onChange={(e) => {
+              e.preventDefault();
+              setSelecLoc(e.target.value);
+            }}
+          >
+            {["Select Location", ...locs].map((v) => {
+              return (
+                <option value={v} key={v4()}>
+                  {v}
+                </option>
+              );
+            })}
+          </select>
+        </div>
+      </div>
+      <ProductContainer>
+        {prods.map((v) => {
+          return <ProductCard v={v} key={v4()} />;
+        })}
+      </ProductContainer>
+      <div className="h-0.5 bg-gray-300 rounded-xl my-10 mx-16"></div>
+      <ProductList2 />
       <NewsLetter />
       <Footer />
     </>
@@ -23,8 +81,24 @@ function ShopNav() {
   return (
     <section id="shop-nav">
       <h2>#Buyrelivently</h2>
-      <p>Save more with coupons &amp; low down payment</p>
+      <p className="text-gray-900">
+        Save more with coupons &amp; low down payment
+      </p>
     </section>
+  );
+}
+
+function ProductList2() {
+  const products = useProduct2();
+  return (
+    <div className="max-w-4xl md:mx-auto mx-2 mt-10 mb-0">
+      <h2 className="text-gray-400 text-3xl"> Featured Products</h2>
+      <ProductContainer>
+        {products.map((v) => {
+          return <ProductCard v={v} key={v4()} />;
+        })}
+      </ProductContainer>
+    </div>
   );
 }
 

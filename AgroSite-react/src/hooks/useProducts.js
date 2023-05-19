@@ -103,15 +103,15 @@ export const useProductBySeller = () => {
       });
       setProducts(prods);
     });
-  }, [user.uid]);
+  }, [user]);
   return products;
 };
 
 export function useProductByCategory() {
   const { category } = useParams();
+  const cates = useCategory();
   const [products, setProducts] = useState([]);
   const [cate, setCate] = useState({});
-  const cates = useCategory();
 
   useEffect(() => {
     let q = productCollection;

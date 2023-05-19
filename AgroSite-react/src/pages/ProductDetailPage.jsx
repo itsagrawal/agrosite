@@ -24,9 +24,9 @@ export default function ProductDetailPage() {
             {prod.brandName}: {prod.name}, {prod.category}
           </div>
 
-          <div className="grid md:grid-cols-2 gap-y-3">
+          <div className="grid md:grid-cols-2 gap-y-3 gap-x-6 items-center">
             <div className="flex justify-center">
-              <img src={prod.image} alt="" className="h-60 object-contain" />
+              <img src={prod.image} alt="" className="h-60 object-contain rounded-xl" />
             </div>
             <div className="flex flex-col gap-y-3">
               <div className="font-bold text-xl tracking-wide">{prod.name}</div>

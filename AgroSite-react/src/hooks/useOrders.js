@@ -1,4 +1,4 @@
-import { getDocs, query, where } from "firebase/firestore";
+import { getDocs, orderBy, query, where, and } from "firebase/firestore";
 import { orderCollection } from "../firebase/dbReferences";
 import { useAppContext } from "../firebase/ApplicationContext";
 import { useEffect, useState } from "react";
@@ -8,7 +8,14 @@ export const useOrderBySeller = () => {
   const { user } = useAppContext();
 
   useEffect(() => {
-    let q = query(orderCollection, where("sid", "==", `${user.uid}seller`));
+    let q = query(
+      orderCollection,
+      and(
+        where("sid", "==", `${user.uid}seller`),
+        where("status", "!=", "Declined")
+      ),
+      orderBy("status", "desc")
+    );
     getDocs(q).then((vi) => {
       let ords = [];
       vi.forEach((v) => {
@@ -16,6 +23,6 @@ export const useOrderBySeller = () => {
       });
       setOrder(ords);
     });
-  }, []);
+  }, [user]);
   return orders;
 };

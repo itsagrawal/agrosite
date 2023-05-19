@@ -18,26 +18,35 @@ export default function MyModal({ product }) {
     console.log(product);
     let selectLoc = formRef.current.location.value;
     let selectQuant = formRef.current.quantity.value;
-    if (!user) {
-      alert("Please Sign In");
-    } else if (product.quantity < selectQuant) {
-      alert("Couldn't Place your Order, Stock is low");
-    } else {
-      let obj = {
-        amount: product.price,
-        buyerName: user.displayName,
-        location: selectLoc,
-        quantity: selectQuant,
-        productId: product.id,
-        sellerName: product.sellerName,
-        status: "Pending",
-        uid: user.uid,
-        dateCreated: Timestamp.now(),
-        sid: product.sid,
-      };
-      setDoc(orderDoc(oid), obj);
+    let contactNo = formRef.current.contactNo.value;
+    if (!contactNo || contactNo.length !== 10) {
+      alert("Enter Mobile Number");
     }
-    closeModal();
+    {
+      let mailAddress = formRef.current.mailAddress.value;
+      if (!user) {
+        alert("Please Sign In");
+      } else if (product.quantity < selectQuant) {
+        alert("Couldn't Place your Order, Stock is low");
+      } else {
+        let obj = {
+          amount: product.price,
+          buyerName: user.displayName,
+          location: selectLoc,
+          quantity: selectQuant,
+          productId: product.id,
+          sellerName: product.sellerName,
+          status: "Pending",
+          uid: user.uid,
+          dateCreated: Timestamp.now(),
+          sid: product.sid,
+          contactNo,
+          mailAddress,
+        };
+        setDoc(orderDoc(oid), obj);
+      }
+      closeModal();
+    }
   }
 
   function closeModal() {
@@ -135,6 +144,27 @@ export default function MyModal({ product }) {
                             className="border rounded px-2"
                             defaultValue={1}
                             required
+                          />
+                        </div>
+                        <div className="grid md:grid-cols-2">
+                          <label htmlFor="contactNo">Enter Contact No.</label>
+                          <input
+                            type="text"
+                            name="contactNo"
+                            id="contactNo"
+                            className="border rounded px-2"
+                            required
+                          />
+                        </div>
+                        <div className="grid md:grid-cols-2">
+                          <label htmlFor="mailAddress">
+                            Enter Mail Address
+                          </label>
+                          <input
+                            type="email"
+                            name="mailAddress"
+                            id="mailAddress"
+                            className="border rounded px-2"
                           />
                         </div>
                       </form>

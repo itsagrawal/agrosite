@@ -8,6 +8,8 @@ import ProductContainer from "../containers/ProductContainer";
 import ProductCard from "../cards/ProductCard";
 import FullPageLoader from "../Loader/FullPageLoader";
 import { useGetSeller } from "../../hooks/useSeller";
+import { useOrderBySeller } from "../../hooks/useOrders";
+import OrderCard from "../cards/OrderCard";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -44,14 +46,7 @@ export default function Example() {
           ))}
         </Tab.List>
         <Tab.Panels className="mt-2">
-          <Tab.Panel
-            className={classNames(
-              "rounded-xl bg-white p-3",
-              "ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2"
-            )}
-          >
-            Orders are coming soon.
-          </Tab.Panel>
+          <OrdersTab />
           <Tab.Panel
             className={classNames(
               "rounded-xl bg-white p-3 py-6 px-4",
@@ -71,6 +66,22 @@ export default function Example() {
         </Tab.Panels>
       </Tab.Group>
     </div>
+  );
+}
+
+function OrdersTab() {
+  const orders = useOrderBySeller();
+  return (
+    <Tab.Panel
+      className={classNames(
+        "rounded-xl bg-white p-3",
+        "ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2"
+      )}
+    >
+      {orders.map((v) => {
+        return <OrderCard order={v} key={v4()} />;
+      })}
+    </Tab.Panel>
   );
 }
 

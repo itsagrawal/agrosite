@@ -15,7 +15,7 @@ import { prodcutsReference } from "../../firebase/storageReferences";
 
 export default function ProductCreate() {
   const [cates, setCates] = useState({});
-  const [selectedCate, setSelectedCate] = useState("Modern Harverster");
+  const [selectedCate, setSelectedCate] = useState("");
   const [locs, setLocs] = useState([]);
   const { user, loading, setLoading } = useAppContext();
   const navigate = useNavigate();
@@ -67,7 +67,7 @@ export default function ProductCreate() {
         address: v.address.value,
         aggregateRating: 0,
         brandName: v.brandName.value,
-        category: v.category.value,
+        category: selectedCate,
         contactDetails: v.contactDetails.value,
         description: v.description.value,
         forRent: v.forRent.checked,
@@ -132,12 +132,13 @@ export default function ProductCreate() {
               name="category"
               id="category"
               className={inputStr}
+              value={selectedCate}
               onChange={(e) => {
-                setSelectedCate(e.target.value);
+                setSelectedCate(e.currentTarget.value);
               }}
             >
               {/* TODO: Add Options Here */}
-              {["Undefined", ...Object.keys(cates)].map((v, idx) => {
+              {["Undefined", ...Object.keys(cates)].map((v) => {
                 return (
                   <option value={v} key={v4()}>
                     {v}

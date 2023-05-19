@@ -23,7 +23,7 @@ export default function CategoryProductDetailPage() {
         <img
           src={cate.image}
           alt=""
-          className="h-56 object-contain self-center"
+          className="h-56 object-contain self-center my-6"
         />
         <p>{cate.description}</p>
         <h3 className="mt-4 mb-2 text-gray-500 italic text-xl">

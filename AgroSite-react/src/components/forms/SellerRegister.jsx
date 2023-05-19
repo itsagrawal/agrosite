@@ -19,13 +19,16 @@ export default function SellerRegister() {
   useEffect(() => {
     setLoading(true);
     (async () => {
-      const v = (await getDoc(LocationDoc)).data();
-      // const v = { locations: ["abc", "bcd"] }; // for development only
-      v.locations.sort();
-      setLocs(v.locations);
+      if (!user) alert("Please Sign ");
+      else {
+        const v = (await getDoc(LocationDoc)).data();
+        // const v = { locations: ["abc", "bcd"] }; // for development only
+        v.locations.sort();
+        setLocs(v.locations);
 
-      if ((await getDoc(sellerDoc(sellerUID))).exists()) {
-        navigate("/seller");
+        if ((await getDoc(sellerDoc(sellerUID))).exists()) {
+          navigate("/seller");
+        }
       }
     })();
     setLoading(false);
@@ -33,22 +36,26 @@ export default function SellerRegister() {
 
   async function submitHandle() {
     // Create data object from form to JS object.
-    const v = formRef.current;
-    let imageURL = "";
-    const supportingFile = v.SellerImage.files[0];
-    await uploadBytes(sellerReference(sellerUID), supportingFile);
-    await getDownloadURL(sellerReference(sellerUID)).then((url) => {
-      imageURL = url;
-    });
-    const obj = {
-      sellerName: v.sellerName.value,
-      sellerLocation: v.sellerLocation.value,
-      GSTName: v.GSTName.value,
-      sid: sellerUID,
-      GSTNumber: v.GSTNumber.value,
-      sellerImage: imageURL,
-    };
-    await setDoc(sellerDoc(sellerUID), obj);
+    if (user) {
+      const v = formRef.current;
+      let imageURL = "";
+      const supportingFile = v.SellerImage.files[0];
+      await uploadBytes(sellerReference(sellerUID), supportingFile);
+      await getDownloadURL(sellerReference(sellerUID)).then((url) => {
+        imageURL = url;
+      });
+      const obj = {
+        sellerName: v.sellerName.value,
+        sellerLocation: v.sellerLocation.value,
+        GSTName: v.GSTName.value,
+        sid: sellerUID,
+        GSTNumber: v.GSTNumber.value,
+        sellerImage: imageURL,
+      };
+      await setDoc(sellerDoc(sellerUID), obj);
+    } else {
+      alert("Please Sign In First");
+    }
     // Upload seller data to firestore.
   }
   const submitHandler = async (e) => {

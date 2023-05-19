@@ -26,9 +26,9 @@ export const useGetSeller = () => {
     if (user) {
       const sellDoc = sellerDoc(user.uid + "seller");
       getDoc(sellDoc).then((v) => {
-        setSeller(v.data());
+        if (v.exists()) setSeller(v.data());
       });
     }
-  }, []);
+  }, [user]);
   return seller;
 };

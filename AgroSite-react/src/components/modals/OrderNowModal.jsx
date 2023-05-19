@@ -15,6 +15,7 @@ export default function MyModal({ product }) {
 
   function submitHandler() {
     let oid = v4();
+    console.log(product);
     let selectLoc = formRef.current.location.value;
     let selectQuant = formRef.current.quantity.value;
     if (!user) {

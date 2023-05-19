@@ -49,7 +49,6 @@ export default function SellerRegister() {
       sellerImage: imageURL,
     };
     await setDoc(sellerDoc(sellerUID), obj);
-    console.log(obj);
     // Upload seller data to firestore.
   }
   const submitHandler = async (e) => {

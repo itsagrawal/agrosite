@@ -4,6 +4,7 @@ import Footer from "../components/footer/Footer";
 import { useProductById } from "../hooks/useProducts";
 import FullPageLoader from "../components/Loader/FullPageLoader";
 import { v4 } from "uuid";
+import OrderNowModal from "../components/modals/OrderNowModal";
 
 export default function ProductDetailPage() {
   const prod = useProductById();
@@ -37,7 +38,7 @@ export default function ProductDetailPage() {
                 <span className="text-gray-500">Category</span>
                 <div className="font-bold ">{prod.category}</div>
               </div>
-              <div className="flex gap-x-2">
+              <div className="flex gap-x-2 flex-wrap gap-y-2">
                 <div className="bg-gray-300 px-4 rounded-full py-1">
                   <span>
                     {prod.forRent ? (
@@ -101,9 +102,7 @@ export default function ProductDetailPage() {
                 </div>
               </div>
               <div className="">
-                <button className="bg-[#d36938] w-full py-1 px-2 rounded shadow">
-                  Buy Now
-                </button>
+                <OrderNowModal product={prod} />
               </div>
             </div>
           </div>

@@ -81,7 +81,6 @@ export const useProduct3 = () => {
 
 export const useProductById = () => {
   const { id } = useParams();
-  console.log(id);
   const [prod, setProd] = useState({});
   useEffect(() => {
     if (id)
@@ -105,7 +104,6 @@ export const useProductBySeller = () => {
       setProducts(prods);
     });
   }, [user.uid]);
-  console.log(products);
   return products;
 };
 
@@ -116,7 +114,6 @@ export function useProductByCategory() {
   const cates = useCategory();
 
   useEffect(() => {
-    console.log(cates[category]);
     let q = productCollection;
     q = query(q, where("category", "==", category));
     getDocs(q).then((vi) => {

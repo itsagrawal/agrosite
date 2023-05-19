@@ -28,4 +28,9 @@ export const sellerDoc = (Suid) => {
   return doc(sellerCollection, Suid);
 };
 
+export const orderCollection = collection(db, "orders");
+export const orderDoc = (oid) => {
+  return doc(orderCollection, oid);
+};
+
 export const FaqDoc = doc(collection(db, "faqs"), "faqs");

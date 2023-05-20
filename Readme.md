@@ -4,11 +4,33 @@
 
 <img src="https://media.geeksforgeeks.org/img-practice/Poster(1)1-1675084069.svg" height='250' width='900'/>
 
-## Agro- Tech:
-
-> #### (AgroTech)
->
-> At a given time some farmer's equipment are idle while some farmer need one. A platform that allows farmers to rent and buy farming equipment. A simple platform with variours features and support can provide function of booking and renting equipment will help needy farmers.
+<dl>
+  <dt>Problems:</dt>
+  <dd>
+    <ul>
+      <li>Limited market access: Farmers have a restricted reach beyond their immediate vicinity.</li>
+      <li>Lack of price transparency and fair pricing: Farmers face challenges in obtaining fair prices for their crops and equipment.</li>
+      <li>Inefficient equipment utilization: Farmers struggle with the high cost and limited utilization of agricultural machinery and equipment.</li>
+      <li>Lack of convenience and time-saving: Traditional methods of finding buyers or advertising are time-consuming and inefficient.</li>
+      <li>Limited access to market information and trends: Farmers have difficulty accessing market data and demand patterns.</li>
+      <li>Isolation within the farming community: Farmers lack opportunities to interact and connect with other farmers.</li>
+      <li>Dependency on intermediaries: Farmers rely heavily on intermediaries, resulting in higher costs and reduced profitability.</li>
+    </ul>
+  </dd>
+  
+  <dt>Solutions:</dt>
+  <dd>
+    <ul>
+      <li>Provide a marketplace platform to expand market access for farmers.</li>
+      <li>Promote transparency in pricing and enable direct negotiation between farmers and buyers.</li>
+      <li>Offer a renting facility to enhance equipment utilization and reduce financial burden.</li>
+      <li>Create a convenient online platform for farmers to list products and connect with buyers.</li>
+      <li>Provide access to market information, trends, and demand patterns.</li>
+      <li>Foster a sense of community by facilitating interaction and connection among farmers.</li>
+      <li>Minimize dependency on intermediaries and facilitate direct transactions.</li>
+    </ul>
+  </dd>
+</dl>
 
 #### Website Live on
 

@@ -4,7 +4,7 @@
 
 ![Solving for India Hackathon](https://github.com/its-kunal-ssi/FarmLink/blob/main/Farming%20website/IMG_20230415_221225.jpg)
 
-## Theme:
+## Agro- Tech:
 
 > #### (AgroTech)
 >

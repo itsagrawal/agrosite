@@ -48,7 +48,7 @@
 - **IDE**: VS Code
 - **Design**: Figma, Canva
 - **Version Control**: Git and GitHub
-- **Database**: Firestore
+- **Database**: Firestore,GCP AMD instance
 
 ### How to Get Started?
 

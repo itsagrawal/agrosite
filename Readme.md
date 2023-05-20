@@ -2,7 +2,7 @@
 
 # Solving for India Hackathon
 
-![Solving for India Hackathon](https://github.com/its-kunal-ssi/FarmLink/blob/main/Farming%20website/IMG_20230415_221225.jpg)
+<img src="https://media.geeksforgeeks.org/img-practice/Poster(1)1-1675084069.svg" height='250' width='900'/>
 
 ## Agro- Tech:
 

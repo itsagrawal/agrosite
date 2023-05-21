@@ -69,16 +69,37 @@ Introducing AgroTech, an innovative online marketplace designed exclusively for 
 
 ## Features
 
-1. Login/Sign Up.
-2. A Marketplace for agricultre products and equipments.
-3. Add Equipment details related to various categories like Crop Protection, Harvesting Equipment,etc
-4. Search equipments of a particular category using the title.
-5. Filter equipment based on their category, price, availability, etc.
-6. Book and rent equipment.
-7. Track booking requests.
-8. View the list of comments and replies related to particular posts.
-9. Support Centre
-10. Chat with owner and customer.
+<ol>
+  <li>User registration and profiles</li>
+  <li>Product listings and management</li>
+  <li>Search and filtering options</li>
+  <li>Online transactions and payment integration</li>
+  <li>Ratings and reviews</li>
+  <li>Renting and leasing functionality</li>
+  <li>Market information and trends</li>
+  <li>Communication and messaging</li>
+  <li>Mobile responsiveness</li>
+  <li>Customer support</li>
+</ol>
+
+## Features we are going to integrate.
+<ol>
+  <li>Multiple language support</li>
+  <li>Advanced search options</li>
+  <li>Wishlists</li>
+  <li>Image and video uploads</li>
+  <li>Bulk listing management</li>
+  <li>Geolocation integration</li>
+  <li>Social media integration</li>
+  <li>Product recommendations</li>
+  <li>Seller verification and ratings</li>
+  <li>User reviews moderation</li>
+  <li>Responsive customer support</li>
+  <li>Integration with shipping and logistics providers</li>
+  <li>Customizable store profiles</li>
+  <li>Deal promotions and discounts</li>
+  <li>Mobile app version</li>
+</ol>
 
 # Demo Video
 

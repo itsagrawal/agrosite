@@ -7,9 +7,7 @@
   ## Problems:
   Indian farmers face numerous challenges within the market system, According to the National Sample Survey, around 86% of farmers are small and marginal and the rest are large farmers. In the traditional market system, both small and large Indian farmers face distinct challenges. Small farmers, who constitute a significant portion of the farming community, struggle with limited market access and poor bargaining power. According to the Agricultural Census of India 2015-16, small operational holdings (less than 2 hectares) accounted for about 86.2% of the total operational holdings. These farmers often rely on local mandis (agricultural markets), where they face difficulties in obtaining fair prices due to the presence of intermediaries and limited competition. Moreover, small farmers may lack information about market trends and prices, further impacting their decision-making process.
 
-On the other hand, large farmers also face challenges within the traditional market system. While they may have better access to resources and infrastructure, they can encounter issues related to price volatility and inadequate marketing channels. Large farmers often deal with substantial post-harvest losses due to inefficient supply chains and limited storage facilities.
-
-Both small and large farmers face constraints imposed by the traditional market system, such as middlemen exploitation and lack of price transparency. These challenges underscore the need for market reforms, that promote fair pricing mechanisms, strengthen market infrastructure, and enhance farmers' access to market information. 
+On the other hand, large farmers also face challenges within the traditional market system. While they may have better access to resources and infrastructure, they can encounter issues related to price volatility and inadequate marketing channels. Large farmers often deal with substantial post-harvest losses due to inefficient supply chains and limited storage facilities. Both small and large farmers face constraints imposed by the traditional market system, such as middlemen exploitation and lack of price transparency. some common problems faced by both farmer categories are:
 
 <ol>
   <li><strong>Limited market access</strong></li>
@@ -20,6 +18,8 @@ Both small and large farmers face constraints imposed by the traditional market 
   <li><strong>Isolation within the farming community</strong></li>
   <li><strong>Dependency on intermediaries</strong></li>
 </ol>
+These challenges underscore the need for market reforms, that promote fair pricing mechanisms, strengthen market infrastructure, and enhance farmers' access to market information.
+
 ## Our solution:
 <dl>
   <dt></dt>

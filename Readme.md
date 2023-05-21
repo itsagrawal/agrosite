@@ -20,7 +20,9 @@ On the other hand, large farmers also face challenges within the traditional mar
 </ul>
 These challenges underscore the need for market reforms, that promote fair pricing mechanisms, strengthen market infrastructure, and enhance farmers' access to market information.
 
-## Our solution:
+
+## Our Solution:
+
 ### AgroTech:
 
 Introducing AgroTech, an innovative online marketplace designed exclusively for farmers. Our platform provides a seamless and user-friendly experience for farmers to sell their crops, equipment, machines, and more. With a focus on enhancing market access and facilitating efficient transactions, AgroTech connects farmers with potential buyers from diverse regions, expanding their customer base and boosting their revenue. Additionally, we offer a convenient renting facility, allowing farmers to maximize the utilization of their machinery and equipment while offering cost-effective solutions to other farmers. By fostering a dynamic and supportive community, our website empowers farmers by providing access to market information, promoting fair pricing, and enabling valuable interactions within the farming community. Our website 
@@ -135,7 +137,7 @@ $ npm start
 
 | S.No. | Name                       | Role                 | GitHub Username: :                                       |
 | ----- | -------------------------- | -------------------- | -------------------------------------------------------- |
-| 1.    | Himanshu jha (Team Leader) | Github management    | [@Himanshujha2106](https://github.com/Himanshujha2106)   |
+| 1.    | Himanshu jha (Team Leader) | Github management & Documentation    | [@Himanshujha2106](https://github.com/Himanshujha2106)   |
 | 2.    | Prabhat chaubey            | Frontend Development | [@prabhatOn](https://github.com/prabhatOn)               |
 | 3.    | Kunal agrawal              | Backend Development  | [@its-kunal-ssi](https://github.com/its-kunal-ssi)       |
 | 4.    | Vaibhav ghanekar           | Frontend Development | [@Vaibhav-ghanekar](https://github.com/Vaibhav-ghanekar) |

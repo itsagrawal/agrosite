@@ -5,42 +5,21 @@
 <img src="https://media.geeksforgeeks.org/img-practice/Poster(1)1-1675084069.svg" height='250' width='900'/>
 
   ## Problems:
-<dl>
-  <dt></dt>
-  <dd>
-    <ul>
-      <li>
-        <strong>Limited market access:</strong>
-        <dd>Farmers have a restricted reach beyond their immediate vicinity, making it challenging to connect with buyers from different regions and access a larger customer base to sell their crops, equipment, and machines effectively.</dd>
-      </li>
-      <li>
-        <strong>Lack of price transparency and fair pricing:</strong>
-        <dd>Farmers face difficulties in obtaining fair prices for their crops and equipment due to the absence of price transparency and the involvement of intermediaries. This hampers their ability to negotiate directly and get a fair value for their products.</dd>
-      </li>
-      <li>
-        <strong>Inefficient equipment utilization:</strong>
-        <dd>Farmers encounter issues related to expensive agricultural machinery and equipment. Limited access to affordable machinery and low utilization rates lead to inefficient use of resources and financial burdens for farmers.</dd>
-      </li>
-      <li>
-        <strong>Lack of convenience and time-saving:</strong>
-        <dd>Traditional methods of finding buyers or advertising involve time-consuming processes that are inefficient for farmers. They need a convenient and time-saving platform to connect with potential buyers or renters.</dd>
-      </li>
-      <li>
-        <strong>Limited access to market information and trends:</strong>
-        <dd>Farmers face challenges in accessing crucial market information, including demand patterns and pricing trends. Lack of such information hinders their ability to make informed decisions about crop selection, pricing strategies, and equipment investments.</dd>
-      </li>
-      <li>
-        <strong>Isolation within the farming community:</strong>
-        <dd>Farmers often experience isolation and a lack of opportunities to interact and connect with other farmers. They need a platform that fosters a sense of community, allowing them to share knowledge, exchange experiences, and establish connections within the farming community.</dd>
-      </li>
-      <li>
-        <strong>Dependency on intermediaries:</strong>
-        <dd>Farmers heavily rely on intermediaries for various aspects of their agricultural activities. This dependence increases costs, reduces profitability, and limits their control over the selling and buying processes. Farmers require a platform that minimizes their dependency on intermediaries and facilitates direct transactions.</dd>
-      </li>
-    </ul>
-  </dd>
-</dl>
-  
+  Indian farmers face numerous challenges within the market system, According to the National Sample Survey, around 86% of farmers are small and marginal and the rest are large farmers. In the traditional market system, both small and large Indian farmers face distinct challenges. Small farmers, who constitute a significant portion of the farming community, struggle with limited market access and poor bargaining power. According to the Agricultural Census of India 2015-16, small operational holdings (less than 2 hectares) accounted for about 86.2% of the total operational holdings. These farmers often rely on local mandis (agricultural markets), where they face difficulties in obtaining fair prices due to the presence of intermediaries and limited competition. Moreover, small farmers may lack information about market trends and prices, further impacting their decision-making process.
+
+On the other hand, large farmers also face challenges within the traditional market system. While they may have better access to resources and infrastructure, they can encounter issues related to price volatility and inadequate marketing channels. Large farmers often deal with substantial post-harvest losses due to inefficient supply chains and limited storage facilities.
+
+Both small and large farmers face constraints imposed by the traditional market system, such as middlemen exploitation and lack of price transparency. These challenges underscore the need for market reforms, that promote fair pricing mechanisms, strengthen market infrastructure, and enhance farmers' access to market information. 
+
+<ol>
+  <li><strong>Limited market access</strong></li>
+  <li><strong>Lack of price transparency and fair pricing</strong></li>
+  <li><strong>Inefficient equipment utilization</strong></li>
+  <li><strong>Lack of convenience and time-saving</strong></li>
+  <li><strong>Limited access to market information and trends</strong></li>
+  <li><strong>Isolation within the farming community</strong></li>
+  <li><strong>Dependency on intermediaries</strong></li>
+</ol>
 ## Our solution:
 <dl>
   <dt></dt>

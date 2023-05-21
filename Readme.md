@@ -9,7 +9,7 @@
 
 On the other hand, large farmers also face challenges within the traditional market system. While they may have better access to resources and infrastructure, they can encounter issues related to price volatility and inadequate marketing channels. Large farmers often deal with substantial post-harvest losses due to inefficient supply chains and limited storage facilities. Both small and large farmers face constraints imposed by the traditional market system, such as middlemen exploitation and lack of price transparency. some common problems faced by both farmer categories are:
 
-<ol>
+<ul>
   <li><strong>Limited market access</strong></li>
   <li><strong>Lack of price transparency and fair pricing</strong></li>
   <li><strong>Inefficient equipment utilization</strong></li>
@@ -17,7 +17,7 @@ On the other hand, large farmers also face challenges within the traditional mar
   <li><strong>Limited access to market information and trends</strong></li>
   <li><strong>Isolation within the farming community</strong></li>
   <li><strong>Dependency on intermediaries</strong></li>
-</ol>
+</ul>
 These challenges underscore the need for market reforms, that promote fair pricing mechanisms, strengthen market infrastructure, and enhance farmers' access to market information.
 
 ## Our solution:

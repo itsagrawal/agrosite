@@ -73,20 +73,20 @@ Introducing AgroSite, an innovative online marketplace designed exclusively for 
   <li>User registration and profiles</li>
   <li>Product listings and management</li>
   <li>Search and filtering options</li>
-  <li>Online transactions and payment integration</li>
   <li>Ratings and reviews</li>
   <li>Renting and leasing functionality</li>
   <li>Market information and trends</li>
-  <li>Communication and messaging</li>
   <li>Mobile responsiveness</li>
-  <li>Customer support</li>
 </ol>
 
 ## Features we are going to integrate.
 <ol>
   <li>Multiple language support</li>
   <li>Advanced search options</li>
+  <li>Customer support</li>
   <li>Wishlists</li>
+  <li>Communication and messaging</li>
+  <li>Online transactions and payment integration</li>
   <li>Image and video uploads</li>
   <li>Bulk listing management</li>
   <li>Geolocation integration</li>
@@ -113,15 +113,17 @@ Introducing AgroSite, an innovative online marketplace designed exclusively for 
     src="https://img.shields.io/badge/javascript%20-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" />
 <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" /> <img
     src="https://img.shields.io/badge/github%20-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white" />
+    <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" />
 
 ## Technology Stack:
 
-- **Frontend**: React
-- **Backend**: Rest Framework
+- **Frontend**: React, Tailwind
+- **Backend**: Rest Framework, Vite
 - **IDE**: VS Code
-- **Design**: Figma, Canva
-- **Version Control**: Git and GitHub
+- **Design**: Figma
+- **Version Control**: Git and GitHub, Docker
 - **Database**: Firestore,GCP AMD instance
+- **Deployment**: ngin-x
 
 ### How to Get Started?
 

@@ -65,7 +65,7 @@ Introducing AgroSite, an innovative online marketplace designed exclusively for 
      
 #### Website Live on
 
-[Link](https://34.172.57.89)
+[Link](http://34.172.57.89)
 
 ## Features
 

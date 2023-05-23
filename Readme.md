@@ -108,7 +108,7 @@ Introducing AgroSite, an innovative online marketplace designed exclusively for 
 <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" /> <img
     src="https://img.shields.io/badge/github%20-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white" />
     <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" />
-
+     
 ## Technology Stack:
 
 - **Frontend**: React, Tailwind
@@ -119,6 +119,8 @@ Introducing AgroSite, an innovative online marketplace designed exclusively for 
 - **Database**: Firestore,GCP AMD instance
 - **Deployment**: ngin-x
 
+## Deployment:
+<img src="https://github.com/its-kunal-ssi/FarmLink/blob/main/AgroSite/assets/figma/diagram.png" />
 ### How to Get Started?
 
 #### GitHub Repository Structure

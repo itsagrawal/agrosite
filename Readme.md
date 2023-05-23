@@ -69,7 +69,6 @@ Introducing AgroSite, an innovative online marketplace designed exclusively for 
   <li>Search and filtering options</li>
   <li>Ratings and reviews</li>
   <li>Renting and leasing functionality</li>
-  <li>Market information and trends</li>
   <li>Mobile responsiveness</li>
   <li>Geolocation integration</li>
    <li>Seller verification</li>

@@ -33,8 +33,10 @@ Introducing AgroSite, an innovative online marketplace designed exclusively for 
       <li>
         <strong>Provides a marketplace platform to expand market access for farmers:</strong>
         <dd>Our website offers a marketplace platform where farmers can showcase their crops, equipment, and machines. This expands their market reach and allows them to connect with buyers from different regions, enabling more effective selling and greater access to customers.</dd>
-        <img src="https://github.com/its-kunal-ssi/FarmLink/blob/main/AgroSite/assets/figma/B_S.png" />
-         <img src="https://github.com/its-kunal-ssi/FarmLink/blob/main/AgroSite/assets/figma/S_B.png" />
+            <img src="https://github.com/its-kunal-ssi/FarmLink/blob/main/AgroSite/assets/figma/B_S.png" />
+         Product Entity
+       <img src="https://github.com/its-kunal-ssi/FarmLink/blob/main/AgroSite/assets/figma/S_B.png" />
+        Order Entity
       </li>
       <li>
         <strong>Promotes transparency in pricing and enable direct negotiation between farmers and buyers:</strong>
@@ -67,7 +69,7 @@ Introducing AgroSite, an innovative online marketplace designed exclusively for 
      
 #### Website Live on
 
-[Link](http://34.172.57.89)
+[AgroSite](http://34.172.57.89)
 
 ## Features
 

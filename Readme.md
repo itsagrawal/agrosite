@@ -23,14 +23,14 @@ These challenges underscore the need for market reforms, that promote fair prici
 
 ### AgroSite:
 
-Introducing AgroSite, an innovative online marketplace designed exclusively for farmers. Our platform provides a seamless and user-friendly experience for farmers to sell their equipment, machines, and more. With a focus on enhancing market access and facilitating efficient transactions, AgroSite connects farmers with potential buyers from diverse regions, expanding their customer base and boosting their revenue. Additionally, we offer a convenient renting facility, allowing farmers to maximize the utilization of their machinery and equipment while offering cost-effective solutions to other farmers. By fostering a dynamic and supportive community, our website empowers farmers by providing access to market information, promoting fair pricing, and enabling valuable interactions within the farming community. Our website 
+Introducing AgroSite, an innovative online marketplace designed exclusively for farmers. Our platform provides a seamless and user-friendly experience for farmers to sell their equipment, machines, and more. With a focus on enhancing market access and facilitating efficient transactions, AgroSite connects farmers with potential buyers from diverse regions, expanding their customer base and boosting their revenue. Additionally, we offer a convenient renting facility, allowing farmers to maximize the utilization of their machinery and equipment while offering cost-effective solutions to other farmers. Our website 
 <dl>
   <dt></dt>
   <dd>
     <ul>
       <li>
         <strong>Provides a marketplace platform to expand market access for farmers:</strong>
-        <dd>Our website offers a marketplace platform where farmers can showcase their crops, equipment, and machines. This expands their market reach and allows them to connect with buyers from different regions, enabling more effective selling and greater access to customers.</dd>
+        <dd>Our website offers a marketplace platform where farmers can showcase their equipment, and machines. This expands their market reach and allows them to connect with buyers from different regions, enabling more effective selling and greater access to customers.</dd>
             <img src="https://github.com/its-kunal-ssi/FarmLink/blob/main/AgroSite/assets/figma/B_S.png" />
          Product Entity
        <img src="https://github.com/its-kunal-ssi/FarmLink/blob/main/AgroSite/assets/figma/S_B.png" />
@@ -47,14 +47,6 @@ Introducing AgroSite, an innovative online marketplace designed exclusively for 
       <li>
         <strong>Creates a convenient online platform for farmers to list products and connect with buyers:</strong>
         <dd>Through our website, farmers can conveniently list their crops, equipment, and machines online. This saves time and effort compared to traditional methods of finding buyers, making the process more efficient and accessible for farmers.</dd>
-      </li>
-      <li>
-        <strong>Provides access to market information, trends, and demand patterns:</strong>
-        <dd>Our website offers farmers access to valuable market information, including trends and demand patterns. This helps farmers make informed decisions about crop selection, pricing strategies, and equipment investments, leading to improved profitability and business planning.</dd>
-      </li>
-      <li>
-        <strong>Fosters a sense of community by facilitating interaction and connection among farmers:</strong>
-        <dd>By providing a platform that connects farmers, our website fosters a sense of community within the farming industry. Farmers can interact, share knowledge, exchange experiences, and establish connections, creating a supportive environment for collaboration and learning.</dd>
       </li>
       <li>
         <strong>Minimizes the dependency on intermediaries and facilitate direct transactions:</strong>

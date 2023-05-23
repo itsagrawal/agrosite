@@ -77,26 +77,16 @@ Introducing AgroSite, an innovative online marketplace designed exclusively for 
   <li>Renting and leasing functionality</li>
   <li>Market information and trends</li>
   <li>Mobile responsiveness</li>
+  <li>Geolocation integration</li>
+   <li>Seller verification</li>
 </ol>
 
 ## Features we are going to integrate.
 <ol>
   <li>Multiple language support</li>
-  <li>Advanced search options</li>
   <li>Customer support</li>
-  <li>Wishlists</li>
   <li>Communication and messaging</li>
   <li>Online transactions and payment integration</li>
-  <li>Image and video uploads</li>
-  <li>Bulk listing management</li>
-  <li>Geolocation integration</li>
-  <li>Social media integration</li>
-  <li>Product recommendations</li>
-  <li>Seller verification and ratings</li>
-  <li>User reviews moderation</li>
-  <li>Responsive customer support</li>
-  <li>Integration with shipping and logistics providers</li>
-  <li>Customizable store profiles</li>
   <li>Deal promotions and discounts</li>
   <li>Mobile app version</li>
 </ol>
@@ -148,7 +138,7 @@ $ git clone https://github.com/its-kunal-ssi/FarmLink.git
 $ git push -u origin main
 ```
 
-- Run the Server and see the demo at [http://agrosite.web.app](http://agrosite.web.app)
+- Run the Server and see the demo at [http://agrosite.web.app](http://34.172.57.89)
 
 ```
 $ npm start

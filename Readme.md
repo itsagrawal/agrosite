@@ -92,8 +92,8 @@ Introducing AgroSite, an innovative online marketplace designed exclusively for 
 </ol>
 
 # Demo Video
-
-<a href="https://youtu.be/0KC02leCvRo"> <img src="https://github.com/its-kunal-ssi/FarmLink/blob/main/Farming%20website/IMG_20230415_215314.jpg" alt="Demo Video" height='250' width='900'/> </a>
+<a href="https://www.youtube.com/watch?v=iJ6AGO1y_28">
+  <img src="https://github.com/its-kunal-ssi/FarmLink/blob/main/Farming%20website/IMG_20230415_215314.jpg" alt="Demo Video" height='250' width='900'/> </a>
 
 ## Technology Stack in use:
 

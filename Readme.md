@@ -5,7 +5,7 @@
 <img src="https://media.geeksforgeeks.org/img-practice/Poster(1)1-1675084069.svg" height='250' width='900'/>
 
   ## Problem:
-  Indian farmers face numerous challenges within the market system, According to the National Sample Survey, around 86% of farmers are small and marginal and the rest are large farmers. In the traditional market system, both small and large Indian farmers face distinct challenges. Small farmers, who constitute a significant portion of the farming community, struggle with limited market access and poor bargaining power. According to the Agricultural Census of India 2015-16, small operational holdings (less than 2 hectares) accounted for about 86.2% of the total operational holdings. 
+  Indian farmers face numerous challenges within the market system, According to the National Sample Survey, around 86% of farmers are small and marginal and the rest are large farmers. In the traditional market system, both small and large Indian farmers face distinct challenges. Small farmers, who constitute a significant portion of the farming community, struggle with limited market access, poor bargaining power and lack of infrastructure due to insufficient capital. According to the Agricultural Census of India 2015-16, small operational holdings (less than 2 hectares) accounted for about 86.2% of the total operational holdings. 
 some common problems faced by farmers are:
 
 <ul>

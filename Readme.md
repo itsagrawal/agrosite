@@ -32,9 +32,9 @@ Introducing AgroSite, an innovative online marketplace designed exclusively for 
         <strong>Provides a marketplace platform to expand market access for farmers:</strong>
         <dd>Our website offers a marketplace platform where farmers can showcase their equipment, and machines. This expands their market reach and allows them to connect with buyers from different regions, enabling more effective selling and greater access to customers.</dd>
             <img src="https://github.com/its-kunal-ssi/FarmLink/blob/main/AgroSite/assets/figma/B_S.png" />
-         Product Entity
+        <p style="text-align: center;"> Product Entity </p>
        <img src="https://github.com/its-kunal-ssi/FarmLink/blob/main/AgroSite/assets/figma/S_B.png" />
-        Order Entity
+        <p style="text-align: center;"> Order Entity </p>
       </li>
       <li>
         <strong>Promotes transparency in pricing and enable direct negotiation between farmers and buyers:</strong>
@@ -107,7 +107,7 @@ Introducing AgroSite, an innovative online marketplace designed exclusively for 
 - **Design**: Figma
 - **Version Control**: Git and GitHub, Docker
 - **Database**: Firestore,GCP AMD instance
-- **Deployment**: ngin-x
+- **Deployment**: nginx
 
 ## Deployment:
 <img src="https://github.com/its-kunal-ssi/FarmLink/blob/main/AgroSite/assets/figma/diagram.png" />

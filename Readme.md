@@ -72,6 +72,7 @@ Introducing AgroSite, an innovative online marketplace designed exclusively for 
   <li>Mobile responsiveness</li>
   <li>Geolocation integration</li>
    <li>Seller verification</li>
+  <li>FAQ's</li>
 </ol>
 
 ## Features we are going to integrate.

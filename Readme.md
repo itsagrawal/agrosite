@@ -12,7 +12,7 @@ some common problems faced by farmers are:
   <li><strong>Limited market access</strong></li>
   <li><strong>Lack of price transparency and fair pricing</strong></li>
   <li><strong>Inefficient equipment utilization</strong></li>
-  <li><strong>Lack of convenience and time-taking</strong></li>
+  <li><strong>lack of infrastructure due to insufficient capital</strong></li>
   <li><strong>Limited access to market information and trends</strong></li>
   <li><strong>Dependency on intermediaries</strong></li>
 </ul>

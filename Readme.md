@@ -1,10 +1,5 @@
-## Tech Pioneers
-
-### Solving for India Hackathon
-
-<img src="https://media.geeksforgeeks.org/img-practice/Poster(1)1-1675084069.svg" height='250' width='900'/>
-
-  ## Problem:
+## Ecothon 3.0 Hackathon
+## Problem:
   Indian farmers face numerous challenges within the market system, According to the National Sample Survey, around 86% of farmers are small and marginal and the rest are large farmers. In the traditional market system, both small and large Indian farmers face distinct challenges. Small farmers, who constitute a significant portion of the farming community, struggle with limited market access, poor bargaining power and lack of infrastructure due to insufficient capital. According to the Agricultural Census of India 2015-16, small operational holdings (less than 2 hectares) accounted for about 86.2% of the total operational holdings. 
 some common problems faced by farmers are:
 
@@ -59,7 +54,7 @@ Introducing AgroSite, an innovative online marketplace designed exclusively for 
      
 #### Website Live on
 
-[AgroSite](http://34.172.57.89)
+[Chirag - AgroSite](https://agrosite-chirag.web.app/)
 
 ## Features
 
@@ -75,20 +70,6 @@ Introducing AgroSite, an innovative online marketplace designed exclusively for 
   <li>FAQ's</li>
 </ol>
 
-## Features we are going to integrate.
-<ol>
-  <li>Multiple language support</li>
-  <li>Customer support</li>
-  <li>Communication and messaging</li>
-  <li>Online transactions and payment integration</li>
-  <li>Deal promotions and discounts</li>
-  <li>Mobile app version</li>
-</ol>
-
-# Demo Video
-<a href="https://www.youtube.com/watch?v=iJ6AGO1y_28">
-  <img src="https://github.com/its-kunal-ssi/FarmLink/blob/main/Farming%20website/IMG_20230415_215314.jpg" alt="Demo Video" height='250' width='900'/> </a>
-
 ## Technology Stack in use:
 
 <img src="https://img.shields.io/badge/html5%20-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white" /> 
@@ -99,66 +80,11 @@ Introducing AgroSite, an innovative online marketplace designed exclusively for 
     src="https://img.shields.io/badge/github%20-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white" />
     <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" />
      
-## Technology Stack:
-
-- **Frontend**: React, Tailwind
-- **Backend**: Rest Framework, Vite
-- **IDE**: VS Code
-- **Design**: Figma
-- **Version Control**: Git and GitHub, Docker
-- **Database**: Firestore,GCP AMD instance
-- **Deployment**: nginx
-
-## Deployment:
-<img src="https://github.com/its-kunal-ssi/FarmLink/blob/main/AgroSite/assets/figma/diagram.png" />
-### How to Get Started?
-
-#### GitHub Repository Structure
-
-| S.No. | Branch Name                                                            | Purpose                    |
-| ----- | ---------------------------------------------------------------------- | -------------------------- |
-| 1.    | [Master](https://github.com/its-kunal-ssi/FarmLink/tree/main/AgroSite) | contains all Frontend code |
-| 2.    | [Backend](https://github.com/its-kunal-ssi/FarmLink)                   | contains all Backend code  |
-
-### Frontend Setup Instructions
-
-- Fork and Clone the repo using
-
-```
-$ git clone https://github.com/its-kunal-ssi/FarmLink.git
-```
-
-- In a local repository add your folder, files.
-
-```
-$ git push -u origin main
-```
-
-- Run the Server and see the demo at [http://agrosite.web.app](http://34.172.57.89)
-
-```
-$ npm start
-```
-
 ## Team Members:
 
 > "Team Members"
 
 | S.No. | Name                       | Role                 | GitHub Username: :                                       |
 | ----- | -------------------------- | -------------------- | -------------------------------------------------------- |
-| 1.    | Himanshu jha (Team Leader) | Github management & Documentation    | [@Himanshujha2106](https://github.com/Himanshujha2106)   |
-| 2.    | Prabhat chaubey            | Frontend Development | [@prabhatOn](https://github.com/prabhatOn)               |
-| 3.    | Kunal agrawal              | Backend Development  | [@its-kunal-ssi](https://github.com/its-kunal-ssi)       |
-| 4.    | Vaibhav ghanekar           | Frontend Development | [@Vaibhav-ghanekar](https://github.com/Vaibhav-ghanekar) |
+| 1.    | Chirag Agrawal | Project Head    | [@Chirag Agrawal](https://github.com/itsagrawal)   |
 
-## Maintainers✨
-
-<table>
-  <tbody><tr>
-    <td align="center"><a href="https://github.com/Himanshujha2106"><img alt="" src="https://avatars.githubusercontent.com/Himanshujha2106" width="100px;"><br><sub><b>Himanshu jha </b></sub></a><br><a href="https://github.com/its-kunal-ssi/FarmLink/commits?author=Himanshujha2106" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/prabhatOn"><img alt="" src="https://avatars.githubusercontent.com/prabhatOn" width="100px;"><br><sub><b>Prabhat chaubey </b></sub></a><br><a href="https://github.com/its-kunal-ssi/FarmLink/commits?author=prabhatOn" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/its-kunal-ssi"><img alt="" src="https://avatars.githubusercontent.com/its-kunal-ssi" width="100px;"><br><sub><b>Kunal agrawal </b></sub></a><br><a href="https://github.com/its-kunal-ssi/FarmLink/commits/backend?author=its-kunal-ssi" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/vaibhav-ghanekar"><img alt="" src="https://avatars.githubusercontent.com/vaibhav-ghanekar" width="100px;"><br><sub><b>Vaibhav ghanekar </b></sub></a><br><a href="https://github.com/its-kunal-ssi/FarmLink/commits/vociecallapi" title="Code">💻</a></td>
-    
-  </tr>
-</tbody></table>
